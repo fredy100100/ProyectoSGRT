@@ -5,7 +5,7 @@ export const Estadisticas = () =>{
     return(
     
      <div className="Est">
-        <h1 className="text-center">ESTADISTICAS</h1>
+        <h1 className="text-center">AQUI SE DEBEN VISUALIZAR LAS ESTADISTICAS</h1>
       
 <Main/>
 <Section/>
