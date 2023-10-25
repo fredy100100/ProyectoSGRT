@@ -1,0 +1,70 @@
+.btn-light{
+  background-color: rgb(185, 177, 177);
+  border-color: rgb(197, 190, 190);
+}
+
+
+  
+  .user-icon {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 35px;
+    font-size: 3rem;
+  }
+  .user-icon:hover{
+    transform: scale(1.2);
+  }
+  
+
+
+  
+  .iconofiltro{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  
+  }
+  
+  .icono-mensaje {
+    display: flex;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .icono-mensaje:hover{
+    transform: scale(1.2); 
+  
+  }
+
+
+  
+  .icono-config{
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .icono-config:hover{
+    transform: scale(1.2); 
+  
+  }
+
+  
+  .icono-cubos{
+    font-size: 2rem;
+    margin-top: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .icono-cubos:hover{
+    transform: scale(1.2); 
+  
+  }
+  
+  .icono-estadis{
+    font-size: 2rem; 
+    margin-top: 20px;
+  }
+
+  .icono-estadis:hover{
+    transform: scale(1.2); 
+  
+  }
+  
