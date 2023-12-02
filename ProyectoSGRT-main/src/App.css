@@ -1,0 +1,94 @@
+.Home {
+  display: grid;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 6fr 6fr 1fr;
+  grid-template-rows: 5em  30em;
+  grid-template-areas:  "main  header  .  section"
+                        "main  aside  aside  aside"
+                        
+}
+
+.Est {
+display: grid;
+background: none ;
+width: 98%;
+margin-left: auto;
+margin-right: auto;
+grid-template-columns: 1fr 12fr 1fr;
+grid-template-rows: 35em;
+grid-template-areas:  "main  .  section"
+                      "main  .  .  "
+}
+
+.User {
+  display: grid;
+  background: none ;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 12fr 1fr;
+  grid-template-rows: 35em;
+  grid-template-areas:  "main  .  section"
+                        "main  .  .  "
+  }
+
+header{
+  background-color: rgba(245, 245, 220, 0.788);
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30;
+  margin-right: 20px;
+  grid-area: header;
+}
+
+section{
+  grid-area: section;
+}
+
+main{
+  background-color: rgba(245, 245, 220, 0.788);
+  width: 90%;
+  margin-top: 10px;
+  margin-right: 2px;
+  margin-bottom: 1px;
+  grid-area: main;
+}
+aside{
+  border: 1px yellow;
+  background-color: rgba(245, 245, 220, 0.788);
+  width: 98%;
+  margin-top: 1px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+  grid-area: aside;
+}
+
+
+body{
+  background-image: url('./Imagenes/fondoprincipal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Modal{
+  float: left;
+}
+
+.logo{
+  margin-top: 12px;
+}
+
+.P-2{
+  width: 100%;
+  background-color: rgb(2, 2, 12);
+  color: azure;
+}
+
+.P-2:hover{
+  transform: scale(1.2); 
+
+}
