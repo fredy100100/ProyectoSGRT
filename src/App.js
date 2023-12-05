@@ -9,22 +9,22 @@ import { Usuarios } from './Componentes/Usuarios/Usuarios';
 function App() {
   return (
     <div className="App">
-    
 
-<Router>
 
-  <Routes>
-    <Route path='/Usuarios' element={<Usuarios/> }></Route>
-    <Route path='/Estadisticas' element={<Estadisticas/> }></Route>
-    <Route path='/' element={<Home/>}></Route>
-    <Route path='/Inicio' element={<Inicio/>}></Route>
+      <Router>
 
-  </Routes>
-</Router>
+        <Routes>
+          <Route path='/Usuarios' element={<Usuarios />}></Route>
+          <Route path='/Estadisticas' element={<Estadisticas />}></Route>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/Inicio' element={<Inicio />}></Route>
+
+        </Routes>
+      </Router>
 
 
     </div>
-    
+
   );
 }
 
