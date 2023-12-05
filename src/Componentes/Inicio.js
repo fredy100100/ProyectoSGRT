@@ -23,10 +23,10 @@ export const Inicio = () => {
               <h2 className="mb-4">Iniciar Sesión</h2>
   
               <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label>Correo Electronico</Form.Label>
                 <Form.Control
                   type="email"
-                  placeholder="Enter email"
+                  placeholder="Ingrese su correo electronico"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -34,10 +34,10 @@ export const Inicio = () => {
               </Form.Group>
   
               <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Constraseña</Form.Label>
                 <Form.Control
                   type="password"
-                  placeholder="Password"
+                  placeholder="Ingrese su contraseña"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required

@@ -26,7 +26,12 @@ export const Main = () => {
         </Col>
       </Row>
       <Row xs={2} md={4} lg={6}>
-        <Col><FontAwesomeIcon className='icono-config' icon={faUserGear} style={{color: "#163a83",}} /></Col>
+        <Col>
+        <Link to={"/CrearUsuario"}>
+          <FontAwesomeIcon className='icono-config' icon={faUserGear} style={{color: "#163a83",}} />
+          </Link>
+          </Col>
+          
       </Row>
       <Row xs={2} md={4} lg={6}>
         <Col><FontAwesomeIcon className='icono-cubos' icon={faCubes} style={{color: "#163a83",}} /></Col>

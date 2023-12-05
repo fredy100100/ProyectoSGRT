@@ -4,6 +4,7 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/Modal';
 import { UserProfile } from './Home/UserProfile';
 import '../App.css'
+import { Link } from 'react-router-dom';
 
 export const Section = () => {
   const [showModal, setShowModal] = useState(false);
@@ -28,13 +29,20 @@ export const Section = () => {
       <Modal show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>
           <Modal.Title >Perfil de Supervisor</Modal.Title>
+          
         </Modal.Header>
         <Modal.Body>
           <UserProfile />
         </Modal.Body>
         <Modal.Footer>
+          
+          <Link to={"/Inicio"}>
+        <button className="btn btn-secondary" onClick={closeModal}>
+            Cerrar Sesion
+          </button>
+          </Link>
           <button className="btn btn-secondary" onClick={closeModal}>
-            Cerrar
+            Cerrar Ventana
           </button>
         </Modal.Footer>
       </Modal>
