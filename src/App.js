@@ -11,7 +11,7 @@ function App() {
     <div className="App">
 
 
-      <Router>
+      
 
         <Routes>
           <Route path='/Estadisticas' element={<Estadisticas />}></Route>
@@ -19,7 +19,7 @@ function App() {
           <Route path='/Inicio' element={<Inicio />}></Route>
           <Route path='/Usuarios' element={<Usuarios />}></Route>
         </Routes>
-      </Router>
+    
 
 
     </div>
