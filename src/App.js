@@ -5,7 +5,7 @@ import { Estadisticas } from './Componentes/Estadisticas/Estadisticas';
 import { Inicio } from './Componentes/Inicio';
 import { CreaciondeUsuarios } from './Componentes/CreaciondeUsuarios';
 import { Inventario } from './Componentes/Inventario';
-
+import { Usuarios } from "./Componentes/Usuarios/Usuarios";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
     <Route path='/Inicio' element={<Inicio/>}></Route>
     <Route path='/CrearUsuario' element={<CreaciondeUsuarios/>}></Route>
     <Route path='/Inventario' element={<Inventario/>}></Route>
-
+    <Route path='/Usuarios' element={<Usuarios/>}></Route>
   </Routes>
 </Router>
 
