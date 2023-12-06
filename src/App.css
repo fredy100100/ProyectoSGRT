@@ -27,17 +27,42 @@ grid-template-areas:  "main  .  section"
                       "main  .  .  "
 }
 
-.User {
-  display: grid;
-  background: none ;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 1fr 12fr 1fr;
-  grid-template-rows: 35em;
-  grid-template-areas:  "main  .  section"
-                        "main  .  .  "
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .Table {
   border: solid 2px black;
