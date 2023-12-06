@@ -1,10 +1,14 @@
+import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Dropdown from "react-bootstrap/Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment } from "@fortawesome/free-solid-svg-icons";
-import { faUserGear } from "@fortawesome/free-solid-svg-icons";
-import { faCubes } from "@fortawesome/free-solid-svg-icons";
-import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
+import {
+  faComment,
+  faUserGear,
+  faCubes,
+  faChartSimple,
+} from "@fortawesome/free-solid-svg-icons";
 import "../App.css";
 import { Link } from "react-router-dom";
 
