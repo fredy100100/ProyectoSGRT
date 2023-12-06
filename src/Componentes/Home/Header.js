@@ -20,7 +20,7 @@ export const Header = () => {
         <Row className='p-2'>
           <Col xs ={5}>
             <Stack className='busqueda-botonn'  direction="horizontal" gap={3}>
-              <Form.Control className="me-auto" placeholder="Ingrese ID requerimiento o ID cliente" />
+              <Form.Control className="me-auto" placeholder="Buscar" />
             </Stack>
               </Col>
               <Col xs={3}>

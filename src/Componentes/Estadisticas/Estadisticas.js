@@ -1,5 +1,5 @@
-// import { Main } from "../Main"
-import { Menu } from '../shared/menu/menu';
+import { Main } from "../Main"
+// import { Menu } from '../shared/menu/menu';
 import { Section } from '../Section';
 import '../../App.css'
 export const Estadisticas = () => {
@@ -7,12 +7,12 @@ export const Estadisticas = () => {
         /*hola*/
         <div className="Est">
 
-            <Menu/>
+            {/* <Menu/> */}
             <h1 className="text-center">AQUI SE DEBEN VISUALIZAR LAS ESTADISTICA</h1>
 
             
 
-            {/* <Main /> */}
+            <Main />
             <Section />
 
         </div>

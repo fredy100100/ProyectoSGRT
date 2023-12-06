@@ -1,4 +1,4 @@
-import { mock } from "./mock"
+import { mock } from '../../Usuarios/mock'
 import './row.css'
 
 export const Row = () => {
