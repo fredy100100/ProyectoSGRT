@@ -53,6 +53,27 @@ export const Main = () => {
       </Row>
       <Row xs={2} md={4} lg={6}>
         <Col>
+          <Dropdown>
+            <Dropdown.Toggle variant="" className="icono-cubos-toggle">
+              <FontAwesomeIcon
+                className="icono-cubos"
+                icon={faCubes}
+                style={{ color: "#163a83" }}
+              />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/CrearUsuario">
+                Crear Nuevo Usuario
+              </Dropdown.Item>
+              <Dropdown.Item href="/Inventario">
+                Actualizar inventario
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
+      </Row>
+      <Row xs={2} md={4} lg={6}>
+        <Col>
           <Link to={"/Estadisticas"}>
             <FontAwesomeIcon
               className="icono-estadis"
