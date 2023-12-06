@@ -27,49 +27,6 @@ grid-template-areas:  "main  .  section"
                       "main  .  .  "
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Table {
-  border: solid 2px black;
-  justify-content: center;
-  margin: 100px 0 0 5px;
-}
-
 header{
   background-color: rgba(245, 245, 220, 0.788);
   width: 100%;
