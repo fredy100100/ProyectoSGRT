@@ -14,11 +14,10 @@ function App() {
       <Router>
 
         <Routes>
-          <Route path='/Usuarios' element={<Usuarios />}></Route>
           <Route path='/Estadisticas' element={<Estadisticas />}></Route>
           <Route path='/' element={<Home />}></Route>
           <Route path='/Inicio' element={<Inicio />}></Route>
-
+          <Route path='/Usuarios' element={<Usuarios />}></Route>
         </Routes>
       </Router>
 
