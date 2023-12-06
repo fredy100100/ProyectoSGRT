@@ -24,9 +24,7 @@ export const Main = () => {
       </Row>
       <Row xs={2} md={4} lg={6}>
         <Col>
-         
             <FontAwesomeIcon className='icono-config' icon={faUserGear} style={{ color: "#163a83" }} />
-        
         </Col>
       </Row>
       <Row xs={2} md={4} lg={6}>
@@ -35,11 +33,8 @@ export const Main = () => {
             <Dropdown.Toggle variant="" className='icono-cubos-toggle'>
               <FontAwesomeIcon className='icono-cubos' icon={faCubes} style={{ color: "#163a83" }} />
             </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-         
-              <Dropdown.Item href="/CrearUsuario">Crear Nuevo Usuario</Dropdown.Item>
-         
+            <Dropdown.Menu>        
+              <Dropdown.Item href="/CrearUsuario">Crear Nuevo Usuario</Dropdown.Item>       
               <Dropdown.Item href="/Inventario">Actualizar inventario</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
