@@ -23,7 +23,7 @@ margin-left: auto;
 margin-right: auto;
 grid-template-columns: 1fr 12fr 1fr;
 grid-template-rows: 35em;
-grid-template-areas:  "main  .  section"
+grid-template-areas:  "main  homeEst  section"
                       "main  .  .  "
 }
 
