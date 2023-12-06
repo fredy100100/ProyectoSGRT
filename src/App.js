@@ -3,7 +3,6 @@ import Home from './Componentes/Home/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Estadisticas } from './Componentes/Estadisticas/Estadisticas';
 import { Inicio } from './Componentes/Inicio';
-
 import { Usuarios } from './Componentes/Usuarios/Usuarios';
 
 
