@@ -1,16 +1,13 @@
-import { Aside } from "./Home/Aside";
 import { Main } from "./Main";
 import { Section } from "./Section";
+import { ModalX } from "./shared/ModalX/ModalX";
 
-export const Inventario = () =>{
-    return(
-        <div className="Inv">
-
-        <h1></h1>
-
-<Main/>
-<Section/>
-
-</div>
-    )
-}
+export const Inventario = () => {
+  return (
+    <div className="Inv">
+      <Main />
+      <ModalX />
+      <Section />
+    </div>
+  );
+};
