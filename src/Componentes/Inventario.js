@@ -14,7 +14,8 @@ export const Inventario = () => {
         <Boton onClick={() =>cambiarEstadoModal1(!estadoModal1)}>Modal 1</Boton>
       </ContenedorBotones>
       <ModalX estado={estadoModal1}
-      cambiarEstado={cambiarEstadoModal1}>
+      cambiarEstado={cambiarEstadoModal1}
+      /* titulo="Hola!" */>
         <Contenido>
           <h1>Ventana Modal</h1>
           <p>Reutilizable y con opciones de personalización.</p>

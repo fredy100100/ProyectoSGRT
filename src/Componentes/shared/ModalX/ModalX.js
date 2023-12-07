@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import "./modal.css";
 
-export const ModalX = ({ children, estado, cambiarEstado }) => {
+export const ModalX = ({ children, estado, cambiarEstado, titulo = ' ' }) => {
   return (
     <>
       {estado && (
         <Overlay>
           <ContenedorModal>
             <EncabezadoModal>
-              <h3>Titulo Modal</h3>
+              <h3>{titulo}</h3>
             </EncabezadoModal>
             <BotonCerrar onClick={() =>cambiarEstado(false)}>
               <svg
