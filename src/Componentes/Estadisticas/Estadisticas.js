@@ -1,11 +1,17 @@
 import { Main } from "../Main";
 import { Section } from "../Section";
 import "../../App.css";
+import { HomeEst } from "../shared/barrs/HomeEst"
+import "../Estadisticas/Estadisticas.css"
+
 export const Estadisticas = () => {
   return (
     <div className="Est">
-      <h1 className="text-center">AQUI SE DEBEN VISUALIZAR LAS ESTADISTICA</h1>
+      
       <Main />
+      <div className="HomeEst-container">
+        <HomeEst></HomeEst>
+      </div>    
       <Section />
     </div>
   );

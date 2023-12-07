@@ -44,15 +44,6 @@ export const Main = () => {
       </Row>
       <Row xs={2} md={4} lg={6}>
         <Col>
-          <FontAwesomeIcon
-            className="icono-cubos"
-            icon={faCubes}
-            style={{ color: "#163a83" }}
-          />
-        </Col>
-      </Row>
-      <Row xs={2} md={4} lg={6}>
-        <Col>
           <Dropdown>
             <Dropdown.Toggle variant="" className="icono-cubos-toggle">
               <FontAwesomeIcon
