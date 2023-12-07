@@ -10,7 +10,7 @@ import { Agree } from "../shared/Agree/Agree";
 export const Usuarios = () => {
   return (
     /*hola*/
-    <div className="users-container">
+    <div className="users-container"> 
 
       <Main />
       

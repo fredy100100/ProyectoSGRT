@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./modal.css";
 
-export const ModalX = ({ children, estado, cambiarEstado, titulo = ' ' }) => {
+export const ModalX = ({ children, estado, cambiarEstado, titulo = '' }) => {
   return (
     <>
       {estado && (
@@ -47,7 +47,7 @@ const Overlay = styled.div`
 const ContenedorModal = styled.div`
   width: 500px;
   height: 100px;
-  background: #fff;
+  background: #FFFFBF;
   position: relative;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 112, 0.2) 0px 7px 29px 0px;
@@ -60,12 +60,12 @@ const EncabezadoModal = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #e8e8e8;
 
   h3 {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: #1766dc;
   }
 `;

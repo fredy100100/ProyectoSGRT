@@ -2,51 +2,53 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Main } from "./Main"
-import {Section} from './Section';
-import '../App.css'
+import { Section } from './Section';
+import '../App.css';
 
-export const CreaciondeUsuarios = () =>{
-   
-    const [userData, setUserData] = useState({
-        Identificacion: " ",
-        PrimerNombre: "",
-        SegundoNombre: '',
-        PrimerApellido: '',
-        SegundoApellido: " ",
-        Correo: '',
-        Celular: " ",
-        password: '',
-        Rol: " ",
-      });
-    
-      const handleChange = (e) => {
-        setUserData({ ...userData, [e.target.name]: e.target.value });
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Nuevo usuario creado:', userData);
-        setUserData({
-          Identificacion: " ",
-          PrimerNombre: "",
-          SegundoNombre: '',
-          PrimerApellido: '',
-          SegundoApellido: " ",
-          Correo: '',
-          Celular: " ",
-          password: '',
-          Rol: " ",
-        });
-      };
-    
-      return (
-        <div className='Cus'>
+export const CreaciondeUsuarios = () => {
+
+  const [userData, setUserData] = useState({
+    Identificacion: " ",
+    PrimerNombre: "",
+    SegundoNombre: '',
+    PrimerApellido: '',
+    SegundoApellido: " ",
+    Correo: '',
+    Celular: " ",
+    password: '',
+    Rol: " ",
+  });
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Nuevo usuario creado:', userData);
+    setUserData({
+      Identificacion: " ",
+      PrimerNombre: "",
+      SegundoNombre: '',
+      PrimerApellido: '',
+      SegundoApellido: " ",
+      Correo: '',
+      Celular: " ",
+      password: '',
+      Rol: " ",
+    });
+  };
+
+  return (
+
+
+      <div className='Cus'>
         <Container className="mt-5">
           <Row className="justify-content-center">
             <Col md={6}>
               <Form onSubmit={handleSubmit} className="p-4 border rounded">
                 <h2 className="mb-4 text-center">Agregar Nuevo Usuario</h2>
-    
+
                 <Form.Group controlId="formidentificacion">
                   <Form.Label>Numero de Documento:</Form.Label>
                   <Form.Control
@@ -57,7 +59,7 @@ export const CreaciondeUsuarios = () =>{
                     required
                   />
                 </Form.Group>
-                
+
                 <Form.Group controlId="formPrimerNombre">
                   <Form.Label>Primer Nombre:</Form.Label>
                   <Form.Control
@@ -68,7 +70,7 @@ export const CreaciondeUsuarios = () =>{
                     required
                   />
                 </Form.Group>
-                
+
                 <Form.Group controlId="formSegundoNombre">
                   <Form.Label>Segundo Nombre:</Form.Label>
                   <Form.Control
@@ -98,7 +100,7 @@ export const CreaciondeUsuarios = () =>{
                     onChange={handleChange}
                   />
                 </Form.Group>
-    
+
                 <Form.Group controlId="formCorreo">
                   <Form.Label>Correo Electronico:</Form.Label>
                   <Form.Control
@@ -120,7 +122,7 @@ export const CreaciondeUsuarios = () =>{
                     required
                   />
                 </Form.Group>
-    
+
                 <Form.Group controlId="formPassword">
                   <Form.Label>Contraseña:</Form.Label>
                   <Form.Control
@@ -142,7 +144,7 @@ export const CreaciondeUsuarios = () =>{
                     required
                   />
                 </Form.Group>
-    
+
                 <Button variant="primary" type="submit" block>
                   Crear Usuario
                 </Button>
@@ -152,11 +154,11 @@ export const CreaciondeUsuarios = () =>{
           </Row>
         </Container>
 
-        <Main/>
-        <Section/>
+        <Main />
+        <Section />
 
-        </div>
+      </div>
 
-      );
-    };
-      
+
+  );
+};
