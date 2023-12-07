@@ -6,7 +6,7 @@ export const Agree = () => {
   return (
     <div className="Agree-container">
       <div>
-        <Link to="../CrearUsuario">
+        <Link to="/Inventario">
           <Button variant="btn btn-light">Agregar Usuario</Button>
         </Link>        
       </div>
