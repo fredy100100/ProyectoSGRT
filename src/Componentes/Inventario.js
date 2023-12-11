@@ -5,6 +5,7 @@ import { ModalX } from "./shared/ModalX/ModalX";
 import styled from "styled-components";
 import { BotonX } from "./shared/BotonX/BotonX";
 import "./inventario.css"
+import { InputX } from "./shared/Input/InputX";
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
@@ -16,45 +17,8 @@ export const Inventario = () => {
         cambiarEstado={cambiarEstadoModal1}
         titulo="Agregar Activo" >
         <Contenido>
-          <div className="Columns-container">
-            <div className="Column1-container">
-              <div className="TipoActivo-select-container">
-                <h5>Tipo de Activo:</h5>
-                <select className="TipoActivo-select">
-                  <option className="TipoActivo-option">Seleccione Tipo de Activo</option>
-                  <option className="TipoActivo-option" value="1">Teclado</option>
-                  <option className="TipoActivo-option" value="2">Mouse</option>
-                  <option className="TipoActivo-option" value="3">Monitor</option>
-                  <option className="TipoActivo-option" value="4">Portatil</option>
-                </select>
-              </div>
-              <div className="SerialActivo-input-container">
-                <h5>Serial:</h5>
-                <input className="SerialActivo-input" placeholder="Ingrese Serial"></input>
-              </div>
-            </div>
-            <div className="Column2-container">
-              <div className="MarcaActivo-select-container">
-                <h5>Marca de Activo:</h5>
-                <select className="MarcaActivo-select">
-                  <option className="MarcaActivo-option">Seleccione Marca de Activo</option>
-                  <option className="MarcaActivo-option" value="1">Samsung</option>
-                  <option className="MarcaActivo-option" value="2">Lenovo</option>
-                  <option className="MarcaActivo-option" value="3">HP</option>
-                  <option className="MarcaActivo-option" value="4">Dell</option>
-                </select>
-              </div>
-              <div className="ModeloActivo-input-container">
-                <h5>Modelo:</h5>
-                <input className="ModeloActivo-input" placeholder="Ingrese Modelo"></input>
-              </div>
-            </div>
-          </div>
+        <InputX>Serial</InputX>
 
-          <div className="ObservacionActivo-input-container">
-            <h5>Observaciones:</h5>
-            <input className="ObservacionActivo-input-container" type="text" placeholder="Observaciones..."></input>
-          </div>
         </Contenido>
         <Boton>Agregar Activo</Boton>
       </ModalX>
@@ -63,13 +27,6 @@ export const Inventario = () => {
   );
 };
 
-const ContenedorBotones = styled.div`
-  padding: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-`;
 const Boton = styled.button`
   display: block;
   padding: 10px 30px;
@@ -117,28 +74,4 @@ const Contenido = styled.div`
     flex-direction: row;
     gap: 20px
   }
-
-  .ObservacionActivo-input-container {
-    align-items: first baseline;
-  }
-
-  input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 10px 11px 12px -8px rgba(0,0,0,0.75);
-  }
-
-  select {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 10px 11px 12px -8px rgba(0,0,0,0.75);
-  }
-  .TipoActivo-select-container {
-    margin-bottom: 20px;
-  }
-
-  .MarcaActivo-select-container {
-    margin-bottom: 20px;
-  }
-
 `;

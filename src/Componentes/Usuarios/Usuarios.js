@@ -5,7 +5,6 @@ import './usuarios.css'
 // import Table from 'react-bootstrap/Table';
 import { Header } from "../Home/Header";
 import { Table } from "../shared/table/table";
-import { Agree } from "../shared/Agree/Agree";
 
 export const Usuarios = () => {
   return (
@@ -21,7 +20,6 @@ export const Usuarios = () => {
           <div className="header-container">
             <Header />
           </div>
-          <Agree></Agree>
           <Section />
         </div>
         <div className="table-content">
