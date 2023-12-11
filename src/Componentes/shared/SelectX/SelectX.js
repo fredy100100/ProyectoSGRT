@@ -1,4 +1,3 @@
-import { Children } from "react";
 import "./Select.css";
 import Select from "react-select";
 
