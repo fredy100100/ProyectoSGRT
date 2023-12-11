@@ -14,14 +14,9 @@ export const BotonX = ({children, onClick}) => {
 }
 
 const ContenedorBotones = styled.div`
-  padding: 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-`;
+`
 const Boton = styled.button`
-  display: block;
   padding: 10px 30px;
   border-radius: 100px;
   color: #fff;

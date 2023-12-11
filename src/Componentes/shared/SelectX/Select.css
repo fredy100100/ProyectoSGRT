@@ -1,0 +1,15 @@
+.SelectX-container {
+    position: relative;
+    margin: 20px 0;   
+}
+
+.SelectX-container label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-60%);
+    color: #fff;
+    font-size: 16px;
+    background: #060b23;
+    padding: 0 2px;
+}

@@ -6,6 +6,8 @@ import styled from "styled-components";
 import { BotonX } from "./shared/BotonX/BotonX";
 import "./inventario.css"
 import { InputX } from "./shared/Input/InputX";
+import { SelectX } from "./shared/SelectX/SelectX";
+import { mock } from "./InventarioX/mock"
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
@@ -17,33 +19,21 @@ export const Inventario = () => {
         cambiarEstado={cambiarEstadoModal1}
         titulo="Agregar Activo" >
         <Contenido>
-        <InputX>Serial</InputX>
+          <form>
+            <InputX type={"text"}>Serial</InputX>
+            <SelectX options={mock}>Marca</SelectX>
+            <BotonX>Agregar Activo</BotonX>
+            
+          </form>
+        
 
         </Contenido>
-        <Boton>Agregar Activo</Boton>
+        
       </ModalX>
       <Section />
     </div>
   );
 };
-
-const Boton = styled.button`
-  display: block;
-  padding: 10px 30px;
-  border-radius: 100px;
-  color: #fff;
-  border: none;
-  background: #1766dc;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  transition: 0.3s ease all;
-  height: fit-content;
-
-  &:hover {
-    background: #0066ff;
-  }
-`;
 
 const Contenido = styled.div`
   display: flex;

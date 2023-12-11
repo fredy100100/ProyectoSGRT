@@ -8,7 +8,7 @@ export const Row = () => {
                 mock.map((data) => {
                     return (
                         <div className="data-container">
-                            <p className="data-name">{data.nombre}</p>
+                            <p>{data.nombre}</p>
                             <p>{data.apellido}</p>
                             <p>{data.correo}</p>
                             <p>{data.celular}</p>
