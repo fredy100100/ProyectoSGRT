@@ -22,11 +22,8 @@ export const Inventario = () => {
           <form>
             <InputX type={"text"}>Serial</InputX>
             <SelectX options={mock}>Marca</SelectX>
-            <BotonX>Agregar Activo</BotonX>
-            
+            <BotonX>Agregar Activo</BotonX>           
           </form>
-        
-
         </Contenido>
         
       </ModalX>
@@ -38,7 +35,6 @@ export const Inventario = () => {
 const Contenido = styled.div`
   display: flex;
   flex-direction: column;
-  align-items:first baseline;
   gap: 20px;
   margin: 20px;
 
