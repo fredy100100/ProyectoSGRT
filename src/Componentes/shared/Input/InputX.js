@@ -1,11 +1,12 @@
 import "./InputX.css"
 
-export const InputX = ({children, type, value, required}) => {
+
+export const InputX = ({children, nombre, type, required}) => {
 
     return (
         <div className="Input-container">
-            <input type={type} value={value} required={required}></input>
-            <label>{children}</label>
+            <input type={type} required={required}></input>
+            <label htmlFor={nombre}>{children}</label>
         </div>
     )
 }

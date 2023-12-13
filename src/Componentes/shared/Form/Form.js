@@ -1,19 +1,18 @@
-import { useForm } from "react-hook-form";
+import './Form.css';
+import { useForm } from 'react-hook-form';
 
-export const Form = ({children}) => {
+export const Form = (props) => {
 
-    const { register, handleSubmit} = useForm();
+    const {children} = props;
 
-    const onSubmit = (data) => {
-        console.log(data);
-    }
+    const { register } = useForm();
+
     return (
-        <>
-        <form onSubmit={handleSubmit(onSubmit)}>
-        {children}
-        <input type="submit" value="Enviar"></input>
-        </form>
-        </>
+        <div className="form-container">
+            <form {...props}>
+                {children}
+            </form>
+        </div>
     )
- 
+
 }

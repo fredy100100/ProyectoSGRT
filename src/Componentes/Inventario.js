@@ -9,16 +9,20 @@ import { InputX } from "./shared/Input/InputX";
 import { SelectX } from "./shared/SelectX/SelectX";
 import { mock } from "./InventarioX/mock";
 import { Form } from "./shared/Form/Form";
+import { tipoactivo } from './InventarioX/tipoactivo';
+import { useForm } from "react-hook-form";
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
-  // const { register, handleSubmit, formState: { errors }, watch, setValue, reset} = useForm()
+  const { register, handleSubmit, formState: { errors }, watch, setValue, reset } = useForm()
 
-  // const onSubmit = handleSubmit((data) => {
-  //   console.log(data);
-  // })
-  
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+
+    reset();
+  })
+
   return (
     <div className="Inv">
       <Main />
@@ -27,13 +31,35 @@ export const Inventario = () => {
         cambiarEstado={cambiarEstadoModal1}
         titulo="Agregar Activo" >
         <Contenido>
-          <form>
-            <InputX type={"text"}>Serial</InputX>
-            <SelectX options={mock}>Marca</SelectX>
-            <BotonX>Agregar Activo</BotonX>           
-          </form>
+          <>
+          
+          </>
+          <Form onSubmit={onSubmit}>
+            <SelectX options={tipoactivo} nombre="tipoactivo" {...register}>
+              Tipo
+            </SelectX>
+            <InputX type={"text"} nombre="serialactivo" {...register("serialactivo",
+              {
+                required: { value: true, message: "Ingrese el serial del activo" }
+              })}>
+              Serial
+            </InputX>
+            <SelectX options={mock} nombre="marcaactivo" {...register("marcaactivo",
+              {
+                required: { value: true, message: "Seleccione la marca del activo" }
+              })}>
+              Marca
+            </SelectX>
+            <InputX type={"text"} nombre="modeloactivo" {...register("modeloactivo",
+              {
+                required: { value: true, message: "Ingrese el modelo del activo" }
+              })}>
+              Modelo
+            </InputX>
+            <BotonX type="submit">Agregar Activo</BotonX>
+          </Form>
         </Contenido>
-        
+        <pre>{JSON.stringify(watch(), null, 2)}</pre>
       </ModalX>
       <Section />
     </div>
@@ -45,27 +71,4 @@ const Contenido = styled.div`
   flex-direction: column;
   gap: 20px;
   margin: 20px;
-
-  h5 {
-    font-size: 15px;
-    font-weight: 700;
-    margin: none;
-  }
-
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  img {
-    width: 100%;
-    vertical-align: top;
-    border-radius: 3px;
-  }
-
-  .Columns-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px
-  }
 `;
