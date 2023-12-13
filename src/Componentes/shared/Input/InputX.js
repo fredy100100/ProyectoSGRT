@@ -1,11 +1,11 @@
 import "./InputX.css"
 
-export const InputX = (props) => {
+export const InputX = ({children, type, value, required}) => {
 
     return (
         <div className="Input-container">
-            <input type={props.type} value={props.value} onChange={props.onChange} required={props.required}></input>
-            <label>{props.label}</label>
+            <input type={type} value={value} required={required}></input>
+            <label>{children}</label>
         </div>
     )
 }
