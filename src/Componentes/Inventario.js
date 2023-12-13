@@ -8,6 +8,7 @@ import "./inventario.css"
 import { InputX } from "./shared/Input/InputX";
 import { SelectX } from "./shared/SelectX/SelectX";
 import { mock } from "./InventarioX/mock"
+import { Form } from "./shared/Form/Form"
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
@@ -19,11 +20,10 @@ export const Inventario = () => {
         cambiarEstado={cambiarEstadoModal1}
         titulo="Agregar Activo" >
         <Contenido>
-          <form>
+          <Form>
             <InputX type={"text"}>Serial</InputX>
-            <SelectX options={mock}>Marca</SelectX>
-            <BotonX>Agregar Activo</BotonX>           
-          </form>
+            <SelectX options={mock}>Marca</SelectX>          
+          </Form>
         </Contenido>
         
       </ModalX>
