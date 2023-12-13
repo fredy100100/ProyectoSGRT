@@ -1,10 +1,7 @@
 import "./Select.css";
 import Select from "react-select";
 
-export const SelectX = (props) => {
-
-    const {children} = props
-    const {nombre} = props
+export const SelectX = ({children, options}) => {
 
     const selectChange = ({ value }) => {
         console.log(value)
@@ -13,8 +10,8 @@ export const SelectX = (props) => {
     return (
 
         <div className="SelectX-container"> 
-            <Select {...props} onChange={selectChange} />
-            <label htmlFor={nombre}>{children}</label>
+            <Select options={options} onChange={selectChange} />
+            <label>{children}</label>
         </div>
     )
 }
