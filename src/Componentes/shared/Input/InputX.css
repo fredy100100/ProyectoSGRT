@@ -8,13 +8,19 @@
     width: 100%;
     height: 40px;
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 0 15px;
-    border: 1px solid hsl(0, 0%, 80%);;
+    border: 1px solid hsl(0, 0%, 80%);
     background: transparent;
     color: #060b23;
     outline: none;
+    transition: border-color all 100ms;
   }
+
+  .Input-container input:focus {
+    border-color: #2684ff;
+    box-shadow: 0 0 0 1px #2684ff;
+}
 
   .Input-container label {
     position: absolute;
