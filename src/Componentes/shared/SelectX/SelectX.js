@@ -1,21 +1,27 @@
+import React from "react";
 import "./Select.css";
 import Select from "react-select";
 
-export const SelectX = (props) => {
+export const SelectX = ({ children, nombre, options, register, required = { value: undefined, message:""} }) => {
 
-    const { children } = props;
+  const selectChange = ({ register, value }) => {
+    ;
 
-    const { nombre } = props;
+  };
 
-    const selectChange = ({ value }) => {
-        console.log(value)
-    }
-
-    return (
-
-        <div className="SelectX-container">
-            <Select {...props} onChange={selectChange} />
-            <label htmlFor={nombre}>{children}</label>
-        </div>
-    )
-}
+  return (
+    <div className="SelectX-container">
+      <Select
+        {...register(nombre, {
+          required: {
+            value: required.value,
+            message: required.message,
+          },
+        })}
+        onChange={selectChange}
+        options={options}
+      />
+      <label htmlFor={nombre}>{children}</label>
+    </div>
+  );
+};

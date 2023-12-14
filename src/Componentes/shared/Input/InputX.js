@@ -1,12 +1,35 @@
-import "./InputX.css"
+import React from "react";
+import "./InputX.css";
 
-
-export const InputX = ({children, nombre, type, required}) => {
-
-    return (
-        <div className="Input-container">
-            <input type={type} required={required}></input>
-            <label htmlFor={nombre}>{children}</label>
-        </div>
-    )
-}
+export const InputX = ({
+  children,
+  type,
+  nombre,
+  register,
+  required = { value: undefined, message:""},
+  minLength = { value: undefined, message:""},
+  maxLength = { value: undefined, message:""},
+}) => {
+  return (
+    <div className="Input-container">
+      <input
+        type={type}
+        {...register(nombre, {
+          required: {
+            value: required.value,
+            message: required.message,
+          },
+          minLength: {
+            value: minLength.value,
+            message: minLength.message,
+          },
+          maxLength: {
+            value: maxLength.value,
+            message: maxLength.message,
+          },
+        })}
+      ></input>
+      <label htmlFor={nombre}>{children}</label>
+    </div>
+  );
+};

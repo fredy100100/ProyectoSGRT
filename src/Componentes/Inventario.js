@@ -10,17 +10,17 @@ import { SelectX } from "./shared/SelectX/SelectX";
 import { mock } from "./InventarioX/mock";
 import { Form } from "./shared/Form/Form";
 import { tipoactivo } from './InventarioX/tipoactivo';
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
-  const { register, handleSubmit, formState: { errors }, watch, setValue, reset } = useForm()
+  const { register, handleSubmit, watch, reset} = useForm();
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
 
-    reset();
+    reset()
   })
 
   return (
@@ -31,35 +31,23 @@ export const Inventario = () => {
         cambiarEstado={cambiarEstadoModal1}
         titulo="Agregar Activo" >
         <Contenido>
-          <>
-          
-          </>
-          <Form onSubmit={onSubmit}>
-            <SelectX options={tipoactivo} nombre="tipoactivo" {...register}>
+          <Form onSubmit ={onSubmit}>
+            <SelectX register={register} options={tipoactivo} nombre="tipoactivo" required={{ value: true, message: "Selecciona el tipo por favor"}}>
               Tipo
             </SelectX>
-            <InputX type={"text"} nombre="serialactivo" {...register("serialactivo",
-              {
-                required: { value: true, message: "Ingrese el serial del activo" }
-              })}>
+            <InputX type={"text"} nombre="serialactivo" register={register} required={{ value: true, message: "Ingresa el serial por favor"}}>
               Serial
             </InputX>
-            <SelectX options={mock} nombre="marcaactivo" {...register("marcaactivo",
-              {
-                required: { value: true, message: "Seleccione la marca del activo" }
-              })}>
+            <SelectX options={mock} nombre="marcaactivo" register={register} required={{ value: true, message: "Selecciona la Marca por favor"}}>
               Marca
             </SelectX>
-            <InputX type={"text"} nombre="modeloactivo" {...register("modeloactivo",
-              {
-                required: { value: true, message: "Ingrese el modelo del activo" }
-              })}>
+            <InputX type={"text"} nombre="modeloactivo" register={register} required={{ value: true, message: "Ingresa el modelo por favor"}}>
               Modelo
             </InputX>
             <BotonX type="submit">Agregar Activo</BotonX>
+            <pre>{JSON.stringify(watch(), null, 2)}</pre>
           </Form>
         </Contenido>
-        <pre>{JSON.stringify(watch(), null, 2)}</pre>
       </ModalX>
       <Section />
     </div>
