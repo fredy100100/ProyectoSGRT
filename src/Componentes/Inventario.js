@@ -10,12 +10,14 @@ import { SelectX } from "./shared/SelectX/SelectX";
 import { mock } from "./InventarioX/mock";
 import { Form } from "./shared/Form/Form";
 import { tipoactivo } from './InventarioX/tipoactivo';
-import { useForm } from "react-hook-form"
+import { useForm, FormProvider } from "react-hook-form"
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
-  const { register, handleSubmit, watch, reset} = useForm();
+  const methods = useForm();
+
+  const { register, handleSubmit, watch, reset} = methods;
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
@@ -24,6 +26,7 @@ export const Inventario = () => {
   })
 
   return (
+    <FormProvider {...methods}>
     <div className="Inv">
       <Main />
       <BotonX onClick={() => cambiarEstadoModal1(!estadoModal1)}>Agregar Activo</BotonX>
@@ -32,13 +35,13 @@ export const Inventario = () => {
         titulo="Agregar Activo" >
         <Contenido>
           <Form onSubmit ={onSubmit}>
-            <SelectX register={register} options={tipoactivo} nombre="tipoactivo" required={{ value: true, message: "Selecciona el tipo por favor"}}>
+            <SelectX options={tipoactivo} nombre="tipoactivo" required={{ value: true, message: "Selecciona el tipo por favor"}}>
               Tipo
             </SelectX>
             <InputX type={"text"} nombre="serialactivo" register={register} required={{ value: true, message: "Ingresa el serial por favor"}}>
               Serial
             </InputX>
-            <SelectX options={mock} nombre="marcaactivo" register={register} required={{ value: true, message: "Selecciona la Marca por favor"}}>
+            <SelectX options={mock} nombre="marcaactivo" required={{ value: true, message: "Selecciona la Marca por favor"}}>
               Marca
             </SelectX>
             <InputX type={"text"} nombre="modeloactivo" register={register} required={{ value: true, message: "Ingresa el modelo por favor"}}>
@@ -51,6 +54,7 @@ export const Inventario = () => {
       </ModalX>
       <Section />
     </div>
+    </FormProvider>
   );
 };
 

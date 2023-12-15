@@ -1,13 +1,11 @@
 import React from "react";
 import "./Select.css";
 import Select from "react-select";
+import { useFormContext } from 'react-hook-form';
 
-export const SelectX = ({ children, nombre, options, register, required = { value: undefined, message:""} }) => {
+export const SelectX = ({ children, nombre, options, required = { value: undefined, message:""} }) => {
 
-  const selectChange = ({ register, value }) => {
-    ;
-
-  };
+  const {register} = useFormContext();
 
   return (
     <div className="SelectX-container">
@@ -16,9 +14,8 @@ export const SelectX = ({ children, nombre, options, register, required = { valu
           required: {
             value: required.value,
             message: required.message,
-          },
+          }
         })}
-        onChange={selectChange}
         options={options}
       />
       <label htmlFor={nombre}>{children}</label>
