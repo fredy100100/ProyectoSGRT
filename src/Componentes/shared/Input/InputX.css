@@ -32,4 +32,11 @@
     background: #fff;
     padding: 0 2px;
   }
+
+  input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: white;
+    color: fieldtext !important;
+}
   

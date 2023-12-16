@@ -17,7 +17,7 @@ import { Table } from "./shared/table/Table";
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
-  const { register, handleSubmit, reset, setValue } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
     mode: "onChange",
     defaultValues: {},
   });
@@ -34,7 +34,7 @@ export const Inventario = () => {
       <div className="layout-inv-container">
         <div className="head-inv-container">
           <div className="header-inv-container">
-            <Header></Header>
+            <Header />
           </div>
           <ModalX
             estado={estadoModal1}
