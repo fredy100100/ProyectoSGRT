@@ -15,8 +15,8 @@
   width: 98%;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: 1fr 6fr 6fr 1fr;
-  grid-template-rows: 5em  30em;
+  grid-template-columns: 1fr 5fr 7fr 1fr;
+  grid-template-rows: 4em  31em;
   grid-template-areas:  "main  header  .  section"
                         "main  aside  aside  aside"
                         
@@ -33,18 +33,6 @@ grid-template-rows: 35em;
 grid-template-areas:  "main  homeEst  section"
                       "main  .  .  "
 }
-
-.Inv {
-  display: grid;
-  background: none ;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 1fr 12fr 1fr;
-  grid-template-rows: 35em;
-  grid-template-areas:  "main  .  .  section"
-                        "main  .  .  ."
-  }
 
 .Cus {
   display: grid;

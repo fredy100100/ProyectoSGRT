@@ -1,18 +1,17 @@
-import { Main } from "../Main"
+import { Main } from "../Main";
 // import { Menu } from '../shared/menu/menu';
-import { Section } from '../Section';
-import './usuarios.css'
+import { Section } from "../Section";
+import "./usuarios.css";
 // import Table from 'react-bootstrap/Table';
 import { Header } from "../Home/Header";
-import { Table } from "../shared/table/table";
+import { Table } from "../shared/table/Table";
 
 export const Usuarios = () => {
   return (
     /*hola*/
-    <div className="users-container"> 
-
+    <div className="users-container">
       <Main />
-      
+
       {/* <Menu/> */}
 
       <div className="layout-container">
@@ -25,14 +24,7 @@ export const Usuarios = () => {
         <div className="table-content">
           <Table />
         </div>
-        
-
       </div>
-
     </div>
-
-
-
-
-  )
-}
+  );
+};

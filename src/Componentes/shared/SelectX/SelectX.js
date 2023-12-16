@@ -1,24 +1,20 @@
 import React from "react";
 import "./Select.css";
 import Select from "react-select";
-import { useFormContext } from 'react-hook-form';
 
-export const SelectX = ({ children, nombre, options, required = { value: undefined, message:""} }) => {
+export const SelectX = ({ children, register, setValue, name, options, required = { value: undefined, message:""} }) => {
 
-  const {register} = useFormContext();
-
+  const handleSelectChange = (selectedOption) => {
+    setValue(name, selectedOption);
+  }
   return (
     <div className="SelectX-container">
       <Select
-        {...register(nombre, {
-          required: {
-            value: required.value,
-            message: required.message,
-          }
-        })}
+        {...register(name, {required: { value: required.value, message: required.message }})}
         options={options}
+        onChange={handleSelectChange}
       />
-      <label htmlFor={nombre}>{children}</label>
+      <label htmlFor={name}>{children}</label>
     </div>
   );
 };

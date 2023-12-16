@@ -1,1 +1,21 @@
+.Inv {
+    display: flex;
+    gap: 20px;
+}
 
+.layout-inv-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.head-inv-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-inv-container {
+    max-width: 550px;
+}
