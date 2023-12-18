@@ -12,7 +12,7 @@ import { Form } from "./shared/Form/Form";
 import { tipoactivo } from "./InventarioX/tipoactivo";
 import { useForm } from "react-hook-form";
 import { Header } from "./Home/Header";
-import { Table } from "./shared/table/Table";
+import { Table } from "./shared/table/table";
 
 export const Inventario = () => {
   const [estadoModal1, cambiarEstadoModal1] = useState(false);
@@ -55,6 +55,9 @@ export const Inventario = () => {
                 >
                   Tipo
                 </SelectX>
+                {
+                  errors.tipoactivo && <span>{errors.tipoactivo.message}</span>
+                }
                 <InputX
                   type={"text"}
                   nombre="serialactivo"
@@ -66,6 +69,9 @@ export const Inventario = () => {
                 >
                   Serial
                 </InputX>
+                {
+                  errors.serialactivo && <span>{errors.serialactivo.message}</span>
+                }
                 <SelectX
                   options={mock}
                   name="marcaactivo"
@@ -78,6 +84,9 @@ export const Inventario = () => {
                 >
                   Marca
                 </SelectX>
+                {
+                  errors.marcaactivo && <span>{errors.marcaactivo.message}</span>
+                }
                 <InputX
                   type={"text"}
                   nombre="modeloactivo"
@@ -89,11 +98,17 @@ export const Inventario = () => {
                 >
                   Modelo
                 </InputX>
+                {
+                  errors.modeloactivo && <span>{errors.modeloactivo.message}</span>
+                }
+                <div className="boton-agregar">
                 <BotonX type="submit">Agregar Activo</BotonX>
+                </div>
+                
               </Form>
             </Contenido>
           </ModalX>
-          <BotonX onClick={() => cambiarEstadoModal1(!estadoModal1)}>Agregar Activo</BotonX>
+          <BotonX  onClick={() => cambiarEstadoModal1(!estadoModal1)}>Agregar Activo</BotonX>
           <Section />
         </div>
         <div className="table-content">
@@ -106,7 +121,6 @@ export const Inventario = () => {
 
 const Contenido = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   margin: 20px;
 `;

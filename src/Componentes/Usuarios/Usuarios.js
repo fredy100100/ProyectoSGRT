@@ -4,7 +4,7 @@ import { Section } from "../Section";
 import "./usuarios.css";
 // import Table from 'react-bootstrap/Table';
 import { Header } from "../Home/Header";
-import { Table } from "../shared/table/Table";
+import { Table } from "../shared/table/table";
 
 export const Usuarios = () => {
   return (
