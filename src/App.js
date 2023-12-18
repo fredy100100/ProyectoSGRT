@@ -6,6 +6,7 @@ import { Inicio } from "./Componentes/Inicio";
 import { CreaciondeUsuarios } from "./Componentes/CreaciondeUsuarios";
 import { Inventario } from "./Componentes/Inventario";
 import { Usuarios } from "./Componentes/Usuarios/Usuarios";
+import { Login } from "./Componentes/login/login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/CrearUsuario" element={<CreaciondeUsuarios />}></Route>
           <Route path="/Inventario" element={<Inventario />}></Route>
           <Route path="/Usuarios" element={<Usuarios />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Router>
     </div>
