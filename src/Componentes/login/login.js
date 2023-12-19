@@ -1,6 +1,6 @@
 import './login.css';
 import { Form } from '../shared/Form/Form';
-import 'boxicons';
+import { FaUser, FaLock } from "react-icons/fa";
 
 export const Login = () => {
 
@@ -8,22 +8,21 @@ export const Login = () => {
         <div className='login-container'>
             <div className="form-login-container">
                 <Form>
-                    <h1>Login</h1>
+                    <h1>Bienvenido</h1>
                     <div className='input-box'>
                         <input type="email" placeholder="Correo electronico" />
-                        <i><box-icon type='solid' name='user'></box-icon></i> 
+                        <FaUser className='icon'/>
                     </div>
                     <div className='input-box'>
                         <input type="password" placeholder="Contraseña" />
-                        <i><box-icon type='solid' name='lock-alt'></box-icon></i>
+                        <FaLock className='icon'/>
                     </div>
-                    <div className='remember-forgot'></div>
+                    <div className='remember-forgot'>
                     <label><input type="checkbox" />Recuerdame</label><a href='#'>Olvidaste tu contraseña?</a>
-                    <button className="boton-login" type='submit'>Login</button>
+                    </div>
+                    <button className="boton-login" type='submit'>Ingresar</button>
                 </Form>
             </div>
         </div>
-
-
     )
 }
