@@ -72,3 +72,5 @@ export const mock = [
       celular: '555-444-5555',
     },
 ]
+
+export const headTableUsuarios = ["nombre", "apellido", "correo", "celular"]
