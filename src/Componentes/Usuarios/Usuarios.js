@@ -1,19 +1,14 @@
 import { Main } from "../Main";
-// import { Menu } from '../shared/menu/menu';
 import { Section } from "../Section";
 import "./usuarios.css";
-// import Table from 'react-bootstrap/Table';
 import { Header } from "../Home/Header";
 import { Table } from "../shared/table/table";
+import { headTableUsuarios } from "./mock"
 
 export const Usuarios = () => {
   return (
-    /*hola*/
     <div className="users-container">
       <Main />
-
-      {/* <Menu/> */}
-
       <div className="layout-container">
         <div className="head-content">
           <div className="header-container">
@@ -22,7 +17,7 @@ export const Usuarios = () => {
           <Section />
         </div>
         <div className="table-content">
-          <Table />
+          <Table headTable={headTableUsuarios} />
         </div>
       </div>
     </div>

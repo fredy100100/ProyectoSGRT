@@ -7,9 +7,8 @@ import { BotonX } from "./shared/BotonX/BotonX";
 import "./inventario.css";
 import { InputX } from "./shared/Input/InputX";
 import { SelectX } from "./shared/SelectX/SelectX";
-import { mock } from "./InventarioX/mock";
+import { headTableActivos, Mockprueba, marcaactivo, tipoactivo } from "./InventarioX/mock";
 import { Form } from "./shared/Form/Form";
-import { tipoactivo } from "./InventarioX/tipoactivo";
 import { useForm } from "react-hook-form";
 import { Header } from "./Home/Header";
 import { Table } from "./shared/table/table";
@@ -73,7 +72,7 @@ export const Inventario = () => {
                   errors.serialactivo && <span>{errors.serialactivo.message}</span>
                 }
                 <SelectX
-                  options={mock}
+                  options={marcaactivo}
                   name="marcaactivo"
                   register={register}
                   setValue={setValue}
@@ -112,7 +111,7 @@ export const Inventario = () => {
           <Section />
         </div>
         <div className="table-content">
-          <Table />
+          <Table headTable={headTableActivos} dataTable={Mockprueba} />
         </div>
       </div>
     </div>

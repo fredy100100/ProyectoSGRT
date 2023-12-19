@@ -73,4 +73,4 @@ export const mock = [
     },
 ]
 
-export const headTableUsuarios = ["nombre", "apellido", "correo", "celular"]
+export const headTableUsuarios = ["Nombre", "Apellido", "Correo", "Celular"]
