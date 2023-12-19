@@ -103,7 +103,6 @@ export const Inventario = () => {
                 <div className="boton-agregar">
                 <BotonX type="submit">Agregar Activo</BotonX>
                 </div>
-                
               </Form>
             </Contenido>
           </ModalX>
