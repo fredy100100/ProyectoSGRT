@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const BotonX = ({children, onClick, type}) => {
+export const BotonX = ({className, children, onClick, type}) => {
     
     return (
         
         <>
         <ContenedorBotones>
-            <Boton onClick={onClick} type={type}>{children}</Boton>
+            <Boton className={className} onClick={onClick} type={type}>{children}</Boton>
       </ContenedorBotones>
         </>
     )

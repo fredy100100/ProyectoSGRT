@@ -3,7 +3,8 @@ import { Section } from "../Section";
 import "./usuarios.css";
 import { Header } from "../Home/Header";
 import { Table } from "../shared/table/table";
-import { headTableUsuarios, mock } from "./mock"
+import { headTableUsuarios, Persona } from "./mock"
+import { CrearPersona } from "./CrearPersona/crearpersona";
 
 export const Usuarios = () => {
   return (
@@ -14,10 +15,11 @@ export const Usuarios = () => {
           <div className="header-container">
             <Header />
           </div>
+          <CrearPersona></CrearPersona>
           <Section />
         </div>
         <div className="table-content">
-          <Table headTable={headTableUsuarios} dataTable={mock} />
+          <Table headTable={headTableUsuarios} dataTable={Persona} />
         </div>
       </div>
     </div>

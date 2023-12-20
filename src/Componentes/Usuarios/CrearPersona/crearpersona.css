@@ -1,0 +1,9 @@
+.inputs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.select-container {
+    width: 240px;
+}

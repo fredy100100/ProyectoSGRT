@@ -1,4 +1,4 @@
-export const mock = [
+export const Persona = [
     {
       nombre: 'Daniel',
       apellido: 'Mendoza',
@@ -74,3 +74,15 @@ export const mock = [
 ]
 
 export const headTableUsuarios = ["Nombre", "Apellido", "Correo", "Celular"]
+
+export const tipoIdentificacion = [
+    { label: "Cedula de ciudadania", value: 1},
+    { label: "Pasaporte", value: 2},
+    { label: "Tarjeta de identidad", value: 3}
+]
+
+export const rol = [
+  { label: "Cliente", value: 1},
+  { label: "Técnico", value: 2},
+  { label: "Supervisor", value: 3}
+]
