@@ -49,7 +49,7 @@
   
   .icono-cubos{
     font-size: 2rem;
-   
+    margin-top: 20px;
     transition: transform 0.3s;
   }
    .icono-cubos-toggle{

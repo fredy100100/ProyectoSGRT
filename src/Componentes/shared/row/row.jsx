@@ -1,21 +1,22 @@
-import { mock } from '../../Usuarios/mock'
 import './row.css'
 
-export const Row = () => {
+export const Row = ({elements}) => {
+
+    const keys = Object.keys(elements[0])
+
     return (
-        <div className="row-container">
-            {
-                mock.map((data) => {
-                    return (
-                        <div className="data-container">
-                            <p className="data-name">{data.nombre}</p>
-                            <p>{data.apellido}</p>
-                            <p>{data.correo}</p>
-                            <p>{data.celular}</p>
-                        </div>
-                    )
-                })
-            }
+        <div className="rows-container">
+           {
+            elements.map((activo, item) => (
+                <tr key={item} className='row-container'>
+                    {
+                        keys.map((key, i) => (
+                            <td key={i} className='data-container'><p>{activo[key]}</p></td>
+                        ))
+                    }
+                </tr>
+            ))
+           }
         </div>
     )
 }

@@ -1,16 +1,14 @@
-import { Row } from '../row/row'
+import { Row } from '../row/row';
+import { Rowhead } from '../RowHead/Rowhead';
 import './table.css'
 
-export const Table = () => {
+export const Table = ({headTable, dataTable}) => {
     return (
         <table className="table-container">
-            <div className='table-head'>
-                <th className='table-head-item'>Nombre</th>
-                <th>Apellido</th>
-                <th>Correo</th>
-                <th>Celular</th>
-            </div>
-            <Row />
+            <thead className='table-head'>
+                <Rowhead items={headTable} />
+            </thead>
+            <Row elements={dataTable} />
         </table>
     )
 }
