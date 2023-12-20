@@ -1,20 +1,23 @@
 import './login.css';
 import { Form } from '../shared/Form/Form';
 import { FaUser, FaLock } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
 export const Login = () => {
+
+    const { handleSubmit } = useForm();
 
     return (
         <div className='login-container'>
             <div className="form-login-container">
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     <h1>Bienvenido</h1>
                     <div className='input-box'>
-                        <input type="email" placeholder="Correo electronico" />
+                        <input type="email" placeholder="Correo electronico" required/>
                         <FaUser className='icon'/>
                     </div>
                     <div className='input-box'>
-                        <input type="password" placeholder="Contraseña" />
+                        <input type="password" placeholder="Contraseña" required/>
                         <FaLock className='icon'/>
                     </div>
                     <div className='remember-forgot'>
