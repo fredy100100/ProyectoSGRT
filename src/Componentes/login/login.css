@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.form-login-container {
+.forms-container {
     width: 420px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
@@ -19,17 +19,26 @@
     padding: 30px 40px;
 }
 
-.form-login-container h1 {
+.forms-container .form-login-container {
+    display: none;
+}
+
+.forms-container h1 {
     font-size: 36px;
     font-family: "Poppins";
     text-align: center;
 }
 
-.form-login-container .input-box {
+.forms-container .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
+}
+
+.forms-container .form-remember-container {
+    position: absolute;
+    transform: translateX(400px);
 }
 
 .input-box input {
@@ -57,28 +66,7 @@
     font-size: 20px;
 }
 
-.remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
-}
-
-.form-login-container a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.form-login-container a:hover {
-    text-decoration: none;
-}
-
-.form-login-container .boton-login {
+.form-container .boton-login {
     width: 100%;
     height: 45px;
     background: #fff;
@@ -90,4 +78,25 @@
     font-size: 16px;
     color: #333;
     font-weight: 600;
+}
+
+.form-login-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-login-container a:hover {
+    text-decoration: underline;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
 }
