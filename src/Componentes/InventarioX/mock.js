@@ -88,4 +88,21 @@ export const Mockprueba = [
 
 ]
 
-export const headTableActivos = ["Tipo", "Serial", "Marca", "Modelo"]
+export const headTableActivos = [
+    {
+        header: "Tipo",
+        accessorKey: 'Tipo'
+    },
+    {
+        header: "Marca",
+        accessorKey: 'Marca'
+    },
+    {
+        header: "Serial",
+        accessorKey: 'Serial'
+    },
+    {
+        header: "Modelo",
+        accessorKey: 'Modelo'
+    },
+]

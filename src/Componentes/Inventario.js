@@ -5,6 +5,7 @@ import { Header } from "./Home/Header";
 import { Table } from "./shared/table/table";
 import { CrearActivo } from "./InventarioX/crearactivo";
 import "./inventario.css";
+import { SimpleTable } from "./shared/simpleTable/simpleTable";
 
 export const Inventario = () => {
 
@@ -20,7 +21,7 @@ export const Inventario = () => {
           <Section />
         </div>
         <div className="table-content">
-          <Table headTable={headTableActivos} dataTable={Mockprueba} />
+          <SimpleTable columns={headTableActivos} data={Mockprueba} />
         </div>
       </div>
     </div>

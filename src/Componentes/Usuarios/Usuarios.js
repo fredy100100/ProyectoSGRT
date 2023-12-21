@@ -2,9 +2,10 @@ import { Main } from "../Main";
 import { Section } from "../Section";
 import "./usuarios.css";
 import { Header } from "../Home/Header";
-import { Table } from "../shared/table/table";
-import { headTableUsuarios, Persona } from "./mock"
+import { columns } from "./mock"
 import { CrearPersona } from "./CrearPersona/crearpersona";
+import { SimpleTable } from "../shared/simpleTable/simpleTable";
+import data from './MOCK_DATA.json'
 
 export const Usuarios = () => {
   return (
@@ -19,7 +20,7 @@ export const Usuarios = () => {
           <Section />
         </div>
         <div className="table-content">
-          <Table headTable={headTableUsuarios} dataTable={Persona} />
+          <SimpleTable columns={columns} data={data}></SimpleTable>
         </div>
       </div>
     </div>
