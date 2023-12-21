@@ -34,7 +34,7 @@ export const CrearPersona = () => {
                 cambiarEstado={cambiarEstadoModal1}
                 titulo="Agregar Usuario">
                 <Contenido>
-                    <Form onSubmit={onSubmit}>
+                    <Form onSubmit={onSubmit} autocomplete="off">
                         <div className="inputs-container">
                             <div className="input1-container">
                             <SelectX
@@ -46,7 +46,8 @@ export const CrearPersona = () => {
                                 required={{
                                     value: true,
                                     message: "Selecciona el tipo de documento por favor",
-                                }} >
+                                }}
+                            >
                                 Tipo de Doc.
                             </SelectX>
                             {
@@ -55,12 +56,24 @@ export const CrearPersona = () => {
                             </div>
                             <div className="input1-container">
                             <InputX
-                                type="number"
+                                type="text"
                                 nombre="numeroIdenticacion"
                                 register={register}
                                 required={{
                                     value: true,
-                                    message: "Ingresa el numero del documento por favor",
+                                    message: "Ingresa el numero por favor",
+                                }}
+                                pattern={{
+                                    value: /^\d*$/,
+                                    message: "Ingrese solo numeros"
+                                }}
+                                minLength={{
+                                    value: 7,
+                                    message: "Debe tener mas de 7 caracteres"
+                                }}
+                                maxLength={{
+                                    value: 10,
+                                    message: "No puede ser mayor a 10 caracteres"
                                 }}
                             >
                                 Numero de Identificación
@@ -137,13 +150,31 @@ export const CrearPersona = () => {
                             errors.correo && <span>{errors.correo.message}</span>
                         }
                         <div className="inputs-container">
+                            <div className="input1-container">
                             <InputX
-                                type="number"
+                                type="text"
                                 nombre="numeroCelular"
                                 register={register}
+                                setValue={setValue}
+                                pattern={{
+                                    value: /^\d*$/,
+                                    message: "Ingrese solo numeros"
+                                }}
+                                minLength={{
+                                    value: 10,
+                                    message: "Debe tener mas de 10 caracteres"
+                                }}
+                                maxLength={{
+                                    value: 10,
+                                    message: "No puede ser mayor a 10 caracteres"
+                                }}
                             >
                                 Celular
                             </InputX>
+                            {
+                                errors.numeroCelular && <span>{errors.numeroCelular.message}</span>
+                            }
+                            </div>
                             <div className="input1-container">
                             <SelectX
                                 className="select-container"

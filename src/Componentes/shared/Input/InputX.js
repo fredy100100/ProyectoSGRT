@@ -7,8 +7,9 @@ export const InputX = ({
   nombre,
   register,
   required = { value: undefined, message:""},
+  pattern = { value: undefined, message:""},
   minLength = { value: undefined, message:""},
-  maxLength = { value: undefined, message:""},
+  maxLength = { value: undefined, message:""}
 }) => {
   return (
     <div className="Input-container">
@@ -18,6 +19,10 @@ export const InputX = ({
           required: {
             value: required.value,
             message: required.message,
+          },
+          pattern: {
+            value: pattern.value,
+            message: pattern.message
           },
           minLength: {
             value: minLength.value,

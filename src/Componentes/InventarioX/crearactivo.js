@@ -32,7 +32,7 @@ export const CrearActivo = () => {
             titulo="Agregar Activo"
         >
             <Contenido>
-                <Form onSubmit={onSubmit}>
+                <Form onSubmit={onSubmit} autocomplete="off">
                     <SelectX
                         options={tipoactivo}
                         name="tipoactivo"
