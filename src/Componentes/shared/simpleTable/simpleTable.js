@@ -47,7 +47,7 @@ export const SimpleTable = ({columns, data}) => {
                                                 )
                                             }
                                             {
-                                                {asc:"↑", desc:"↓"}[header.column.getIsSorted() ?? null]
+                                                {asc:" ↑", desc:" ↓"}[header.column.getIsSorted() ?? null]
                                             }       
                                         </th>
                                     ))
