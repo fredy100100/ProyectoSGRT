@@ -1,6 +1,7 @@
 import { Main } from "./Main";
 import { Section } from "./Section";
-import { headTableActivos, Mockprueba} from "./InventarioX/mock";
+import { headTableActivos} from "./InventarioX/mock";
+import data from "./InventarioX/MOCK_DATA.json";
 import { Header } from "./Home/Header";
 import { CrearActivo } from "./InventarioX/crearactivo";
 import "./inventario.css";
@@ -20,7 +21,7 @@ export const Inventario = () => {
           <Section />
         </div>
         <div className="table-content">
-          <SimpleTable columns={headTableActivos} data={Mockprueba} titulo="Activos" />
+          <SimpleTable columns={headTableActivos} data={data} titulo="Activos" />
         </div>
       </div>
     </div>

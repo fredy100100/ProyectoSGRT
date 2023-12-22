@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ModalX } from "../../shared/ModalX/ModalX";
 import { SelectX } from "../../shared/SelectX/SelectX";
 import { InputX } from "../../shared/Input/InputX";
-import { tipoIdentificacion, rol } from "../mock";
+import { tipoIdentificacion, rol, area, sede} from "../mock";
 import { BotonX } from "../../shared/BotonX/BotonX";
 import { Form } from "../../shared/Form/Form";
 import { useForm } from "react-hook-form"
@@ -37,70 +37,70 @@ export const CrearPersona = () => {
                     <Form onSubmit={onSubmit} autocomplete="off">
                         <div className="inputs-container">
                             <div className="input1-container">
-                            <SelectX
-                                className="select-container"
-                                options={tipoIdentificacion}
-                                name="tipoIdentificacion"
-                                register={register}
-                                setValue={setValue}
-                                required={{
-                                    value: true,
-                                    message: "Selecciona el tipo de documento por favor",
-                                }}
-                            >
-                                Tipo de Doc.
-                            </SelectX>
-                            {
-                                errors.tipoIdentificacion && <span>{errors.tipoIdentificacion.message}</span>
-                            }
+                                <SelectX
+                                    className="select-container"
+                                    options={tipoIdentificacion}
+                                    name="tipoIdentificacion"
+                                    register={register}
+                                    setValue={setValue}
+                                    required={{
+                                        value: true,
+                                        message: "Selecciona el tipo de documento por favor",
+                                    }}
+                                >
+                                    Tipo de Doc.
+                                </SelectX>
+                                {
+                                    errors.tipoIdentificacion && <span>{errors.tipoIdentificacion.message}</span>
+                                }
                             </div>
                             <div className="input1-container">
-                            <InputX
-                                type="text"
-                                nombre="numeroIdenticacion"
-                                register={register}
-                                required={{
-                                    value: true,
-                                    message: "Ingresa el numero por favor",
-                                }}
-                                pattern={{
-                                    value: /^\d*$/,
-                                    message: "Ingrese solo numeros"
-                                }}
-                                minLength={{
-                                    value: 7,
-                                    message: "Debe tener mas de 7 caracteres"
-                                }}
-                                maxLength={{
-                                    value: 10,
-                                    message: "No puede ser mayor a 10 caracteres"
-                                }}
-                            >
-                                Numero de Identificación
-                            </InputX>
-                            {
-                                errors.numeroIdenticacion && <span>{errors.numeroIdenticacion.message}</span>
-                            }
-                        </div>
+                                <InputX
+                                    type="text"
+                                    nombre="numeroIdenticacion"
+                                    register={register}
+                                    required={{
+                                        value: true,
+                                        message: "Ingresa el numero por favor",
+                                    }}
+                                    pattern={{
+                                        value: /^\d*$/,
+                                        message: "Ingrese solo numeros"
+                                    }}
+                                    minLength={{
+                                        value: 7,
+                                        message: "Debe tener mas de 7 caracteres"
+                                    }}
+                                    maxLength={{
+                                        value: 10,
+                                        message: "No puede ser mayor a 10 caracteres"
+                                    }}
+                                >
+                                    Numero de Identificación
+                                </InputX>
+                                {
+                                    errors.numeroIdenticacion && <span>{errors.numeroIdenticacion.message}</span>
+                                }
                             </div>
+                        </div>
                         <div className="inputs-container">
                             <div className="input1-container">
-                            <InputX
-                                type="text"
-                                nombre="primerNombre"
-                                register={register}
-                                required={{
-                                    value: true,
-                                    message: "Ingresa el nombre por favor",
-                                }}
-                            >
-                                Primer Nombre
-                            </InputX>
-                            {
-                                errors.primerNombre && <span>{errors.primerNombre.message}</span>
-                            }
+                                <InputX
+                                    type="text"
+                                    nombre="primerNombre"
+                                    register={register}
+                                    required={{
+                                        value: true,
+                                        message: "Ingresa el nombre por favor",
+                                    }}
+                                >
+                                    Primer Nombre
+                                </InputX>
+                                {
+                                    errors.primerNombre && <span>{errors.primerNombre.message}</span>
+                                }
                             </div>
-                            
+
                             <InputX
                                 type="text"
                                 nombre="segundoNombre"
@@ -111,22 +111,22 @@ export const CrearPersona = () => {
                         </div>
                         <div className="inputs-container">
                             <div className="input1-container">
-                            <InputX
-                                type="text"
-                                nombre="primerApellido"
-                                register={register}
-                                required={{
-                                    value: true,
-                                    message: "Ingresa el apellido por favor",
-                                }}
-                            >
-                                Primer Apellido
-                            </InputX>
-                            {
-                                errors.primerApellido && <span>{errors.primerApellido.message}</span>
-                            }
+                                <InputX
+                                    type="text"
+                                    nombre="primerApellido"
+                                    register={register}
+                                    required={{
+                                        value: true,
+                                        message: "Ingresa el apellido por favor",
+                                    }}
+                                >
+                                    Primer Apellido
+                                </InputX>
+                                {
+                                    errors.primerApellido && <span>{errors.primerApellido.message}</span>
+                                }
                             </div>
-                            
+
                             <InputX
                                 type="text"
                                 nombre="segundoApellido"
@@ -151,46 +151,96 @@ export const CrearPersona = () => {
                         }
                         <div className="inputs-container">
                             <div className="input1-container">
-                            <InputX
-                                type="text"
-                                nombre="numeroCelular"
-                                register={register}
-                                setValue={setValue}
-                                pattern={{
-                                    value: /^\d*$/,
-                                    message: "Ingrese solo numeros"
-                                }}
-                                minLength={{
-                                    value: 10,
-                                    message: "Debe tener mas de 10 caracteres"
-                                }}
-                                maxLength={{
-                                    value: 10,
-                                    message: "No puede ser mayor a 10 caracteres"
-                                }}
-                            >
-                                Celular
-                            </InputX>
-                            {
-                                errors.numeroCelular && <span>{errors.numeroCelular.message}</span>
-                            }
+                                <InputX
+                                    type="text"
+                                    nombre="numeroCelular"
+                                    register={register}
+                                    setValue={setValue}
+                                    pattern={{
+                                        value: /^\d*$/,
+                                        message: "Ingrese solo numeros"
+                                    }}
+                                    minLength={{
+                                        value: 10,
+                                        message: "Debe tener mas de 10 caracteres"
+                                    }}
+                                    maxLength={{
+                                        value: 10,
+                                        message: "No puede ser mayor a 10 caracteres"
+                                    }}
+                                >
+                                    Celular
+                                </InputX>
+                                {
+                                    errors.numeroCelular && <span>{errors.numeroCelular.message}</span>
+                                }
                             </div>
                             <div className="input1-container">
-                            <SelectX
-                                className="select-container"
-                                options={rol}
-                                name="tipoRol"
-                                register={register}
-                                setValue={setValue}
-                                required={{
-                                    value: true,
-                                    message: "Selecciona el Rol por favor",
-                                }} >
-                                Rol
-                            </SelectX>
-                            {
-                                errors.tipoRol && <span>{errors.tipoRol.message}</span>
-                            }
+                                <SelectX
+                                    className="select-container"
+                                    options={rol}
+                                    name="tipoRol"
+                                    register={register}
+                                    setValue={setValue}
+                                    required={{
+                                        value: true,
+                                        message: "Selecciona el Rol por favor",
+                                    }} >
+                                    Rol
+                                </SelectX>
+                                {
+                                    errors.tipoRol && <span>{errors.tipoRol.message}</span>
+                                }
+                            </div>
+                        </div>
+                        <InputX
+                            type="text"
+                            nombre="cargoPersona"
+                            register={register}
+                            required={{
+                                value: true,
+                                message: "Ingresa el cargo por favor",
+                            }}
+                        >
+                            Cargo
+                        </InputX>
+                        {
+                            errors.cargoPersona && <span>{errors.cargoPersona.message}</span>
+                        }
+                        <div className="inputs-container">
+                            <div className="input1-container">
+                                <SelectX
+                                    className="select-container"
+                                    options={area}
+                                    name="area"
+                                    register={register}
+                                    setValue={setValue}
+                                    required={{
+                                        value: true,
+                                        message: "Selecciona el area por favor",
+                                    }} >
+                                    Area
+                                </SelectX>
+                                {
+                                    errors.area && <span>{errors.area.message}</span>
+                                }
+                            </div>
+                            <div className="input1-container">
+                                <SelectX
+                                    className="select-container"
+                                    options={sede}
+                                    name="sede"
+                                    register={register}
+                                    setValue={setValue}
+                                    required={{
+                                        value: true,
+                                        message: "Selecciona la sede por favor",
+                                    }} >
+                                    Sede
+                                </SelectX>
+                                {
+                                    errors.sede && <span>{errors.sede.message}</span>
+                                }
                             </div>
                         </div>
                         <InputX
