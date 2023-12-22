@@ -52,6 +52,12 @@ const ContenedorModal = styled.div`
   box-shadow: rgba(100, 100, 112, 0.2) 0px 7px 29px 0px;
   padding: 20px;
   height: fit-content;
+
+  span {
+    display:block;
+    color: tomato;
+    font-size: small;
+  }
 `;
 
 const EncabezadoModal = styled.div`

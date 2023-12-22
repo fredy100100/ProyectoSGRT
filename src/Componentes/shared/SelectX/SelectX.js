@@ -2,7 +2,7 @@ import React from "react";
 import "./Select.css";
 import Select from "react-select";
 
-export const SelectX = ({ children, register, setValue, name, options, required = { value: undefined, message:""} }) => {
+export const SelectX = ({className, children, register, setValue, name, options, required = { value: undefined, message:""} }) => {
 
   const handleSelectChange = (selectedOption) => {
     setValue(name, selectedOption);
@@ -10,6 +10,7 @@ export const SelectX = ({ children, register, setValue, name, options, required 
   return (
     <div className="SelectX-container">
       <Select
+        className={className}
         {...register(name, {required: { value: required.value, message: required.message }})}
         options={options}
         onChange={handleSelectChange}
