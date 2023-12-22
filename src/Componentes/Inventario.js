@@ -20,7 +20,7 @@ export const Inventario = () => {
           <Section />
         </div>
         <div className="table-content">
-          <SimpleTable columns={headTableActivos} data={Mockprueba} />
+          <SimpleTable columns={headTableActivos} data={Mockprueba} titulo="Activos" />
         </div>
       </div>
     </div>

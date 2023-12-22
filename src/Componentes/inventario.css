@@ -19,13 +19,3 @@
 .header-inv-container {
     max-width: 550px;
 }
-
-span {
-    display:block;
-    color: tomato;
-    font-size: small;
-  }
-
- .boton-agregar {
-    margin-top: 20px;
- }

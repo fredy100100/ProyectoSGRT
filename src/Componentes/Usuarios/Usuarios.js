@@ -20,7 +20,7 @@ export const Usuarios = () => {
           <Section />
         </div>
         <div className="table-content">
-          <SimpleTable columns={columns} data={data}></SimpleTable>
+          <SimpleTable columns={columns} data={data} titulo="Usuarios"></SimpleTable>
         </div>
       </div>
     </div>

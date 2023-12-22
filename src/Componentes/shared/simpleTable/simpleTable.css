@@ -1,24 +1,138 @@
 .tablaReusable {
-    padding: 1rem;
+    width: 82vw;
+    height: 85vh;
+    background-color: #fff5;
+    /* backdrop-filter: blur(7px); */
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    padding-bottom: .3rem;
+    font-size: 15px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 0.6rem;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
 }
 
-thead {
-    background: #333;
+.table-header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+}
+
+.simpleTable-container {
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+.simpleTable-container::-webkit-scrollbar {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+thead th {
+    /* position: sticky; */
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr:hover {
+    background-color: #fff6;
+}
+
+.table-navegation {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 0.6rem 0;
+    font-size: 12px;
+}
+
+.table-navegation button { 
+    top: 50%;
+    left: 50%;
+    background: #1766dc;
+    border: none;
     color: white;
+    text-align: center;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 100px;
 }
 
-th, td {
-    text-align: left;
-    padding: 16px;
+.table-navegation button span { 
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
 }
 
-tr:nth-child(even) {
-    background: #f2f2f2;
+.table-navegation button .span1::after { 
+    content: "\00ab";
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.table-navegation button .span2::after { 
+    content: "\2039";
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.table-navegation button .span3::after { 
+    content: "\203a";
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.table-navegation button .span4::after { 
+    content: "\00bb";
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.table-navegation button:hover .span1 {
+    padding-right: 12px;
+}
+
+.table-navegation button:hover .span2 {
+    padding-right: 12px;
+}
+
+.table-navegation button:hover .span3 {
+    padding-left: 12px;
+}
+
+.table-navegation button:hover .span4 {
+    padding-left: 12px;
+}
+
+.table-navegation button:hover span::after {
+    opacity: 1;
+    right: 0;
 }
