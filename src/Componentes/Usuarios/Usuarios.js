@@ -11,12 +11,12 @@ export const Usuarios = () => {
   return (
     <div className="users-container">
       <Main />
-      <div className="layout-container">
-        <div className="head-content">
-          <div className="header-container">
-            <Header />
+      <div className="layout-users-container">
+        <div className="head-users-container">
+          <div className="header-users-container">
+            <Header nombre="usuario" />
           </div>
-          <CrearPersona></CrearPersona>
+          <CrearPersona />
           <Section />
         </div>
         <div className="table-content">

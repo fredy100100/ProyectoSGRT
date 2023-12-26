@@ -1,0 +1,24 @@
+.header-container {
+    display: flex;
+    background: #fff8;
+    width: 18vw;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 0.8rem;
+}
+
+.header-container input {
+    margin: 20px;
+    border-radius: .5rem;
+    border: none;
+    padding: 2px;
+    padding-left: 10px;
+    outline: none;
+    transition: all 100ms;  
+}
+
+.header-container input:focus {
+    border-color: #2684ff;
+    box-shadow: 0 0 0 1px #2684ff;
+  }

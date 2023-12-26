@@ -1,9 +1,11 @@
-import '../../../App.css'
+import './header.css'
 
-export const Header = () => {
+export const Header = ( { getFilteredRowModel }) => {
+
   return (
-    <>
-    Prueba
-    </>
+    <div className="header-container">
+      <input placeholder="Buscar">
+      </input>
+    </div>
   );
 }

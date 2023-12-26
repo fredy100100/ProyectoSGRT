@@ -7,7 +7,6 @@ import data from './MOCK_DATA Requerimientos.json';
 import { columns } from './mockhome';
 import './Home.css'
 
-
 function Home() {
   return (
     <div className="home-container">
@@ -15,7 +14,7 @@ function Home() {
       <div className='layout-home-container'>
         <div className='head-home-container'>
           <div className='header-home-container'>
-            <Header />
+            <Header nombre="requerimiento"/>
           </div>
           <Section />
         </div>

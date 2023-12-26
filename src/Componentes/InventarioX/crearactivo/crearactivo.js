@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { ModalX } from "../shared/ModalX/ModalX";
-import { SelectX } from "../shared/SelectX/SelectX";
-import { InputX } from "../shared/Input/InputX";
-import { marcaactivo, tipoactivo} from "./mock";
-import { BotonX } from "../shared/BotonX/BotonX";
-import { Form } from "../shared/Form/Form";
+import { ModalX } from "../../shared/ModalX/ModalX"
+import { SelectX } from "../../shared/SelectX/SelectX";
+import { InputX } from "../../shared/Input/InputX";
+import { marcaactivo, tipoactivo} from "../mock";
+import { BotonX } from "../../shared/BotonX/BotonX";
+import { Form } from "../../shared/Form/Form";
 import { useForm } from "react-hook-form"
 import styled from "styled-components";
 
