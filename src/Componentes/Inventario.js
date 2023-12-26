@@ -2,7 +2,7 @@ import { Main } from "./Main";
 import { Section } from "./Section";
 import { headTableActivos} from "./InventarioX/mock";
 import data from "./InventarioX/MOCK_DATA.json";
-import { Header } from "./Home/Header";
+import { Header } from "./shared/Header/Header"
 import { CrearActivo } from "./InventarioX/crearactivo";
 import "./inventario.css";
 import { SimpleTable } from "./shared/simpleTable/simpleTable";

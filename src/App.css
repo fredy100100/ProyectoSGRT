@@ -10,7 +10,7 @@
   height: 95vh;
 }
 
-.Home {
+.Home1 {
   display: grid;
   width: 98%;
   margin-left: auto;
@@ -66,17 +66,6 @@ main{
   margin-bottom: 1px;
   grid-area: main;
 }
-
-aside{
-  border: 1px yellow;
-  background-color: rgba(245, 245, 220, 0.788);
-  width: 98%;
-  margin-top: 1px;
-  margin-right: 5px;
-  margin-bottom: 1px;
-  grid-area: aside;
-}
-
 
 body{
   background-image: url('./Imagenes/fondoprincipal.jpg');

@@ -1,7 +1,7 @@
 import { Main } from "../Main";
 import { Section } from "../Section";
 import "./usuarios.css";
-import { Header } from "../Home/Header";
+import { Header } from "../shared/Header/Header"
 import { columns } from "./mock"
 import { CrearPersona } from "./CrearPersona/crearpersona";
 import { SimpleTable } from "../shared/simpleTable/simpleTable";

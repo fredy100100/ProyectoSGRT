@@ -1,0 +1,722 @@
+[
+    {
+        "ID Solicitud": 1,
+        "Cliente": "Osborne Caughtry",
+        "Estado": "Rechazado",
+        "Categoria": "Database",
+        "Fecha creación": "1/19/2023",
+        "Prioridad": "low",
+        "Tecnico": "Belicia Donn"
+    },
+    {
+        "ID Solicitud": 2,
+        "Cliente": "Rocky Rizzone",
+        "Estado": "Pendiente",
+        "Categoria": "Hardware",
+        "Fecha creación": "5/22/2023",
+        "Prioridad": "low",
+        "Tecnico": "Rodie Auchterlony"
+    },
+    {
+        "ID Solicitud": 3,
+        "Cliente": "Harriet Bowstead",
+        "Estado": "Pendiente",
+        "Categoria": "Backup",
+        "Fecha creación": "5/24/2023",
+        "Prioridad": "low",
+        "Tecnico": "Sheff Atwood"
+    },
+    {
+        "ID Solicitud": 4,
+        "Cliente": "Natassia Tweedle",
+        "Estado": "Rechazado",
+        "Categoria": "Software",
+        "Fecha creación": "10/11/2023",
+        "Prioridad": "high",
+        "Tecnico": "Yoshiko Joska"
+    },
+    {
+        "ID Solicitud": 5,
+        "Cliente": "Donall Goldthorpe",
+        "Estado": "Rechazado",
+        "Categoria": "Application",
+        "Fecha creación": "7/28/2023",
+        "Prioridad": "low",
+        "Tecnico": "Elvyn Waison"
+    },
+    {
+        "ID Solicitud": 6,
+        "Cliente": "Nanci Spedding",
+        "Estado": "Cerrado",
+        "Categoria": "Database",
+        "Fecha creación": "11/5/2023",
+        "Prioridad": "low",
+        "Tecnico": "Hobie Sweett"
+    },
+    {
+        "ID Solicitud": 7,
+        "Cliente": "Cris Mengo",
+        "Estado": "Rechazado",
+        "Categoria": "Database",
+        "Fecha creación": "8/21/2023",
+        "Prioridad": "low",
+        "Tecnico": "Malcolm Claige"
+    },
+    {
+        "ID Solicitud": 8,
+        "Cliente": "Isaak Krystek",
+        "Estado": "Cerrado",
+        "Categoria": "Hardware",
+        "Fecha creación": "4/27/2023",
+        "Prioridad": "low",
+        "Tecnico": "Gareth Vasnev"
+    },
+    {
+        "ID Solicitud": 9,
+        "Cliente": "Dasha Domegan",
+        "Estado": "En progreso",
+        "Categoria": "Software",
+        "Fecha creación": "12/28/2022",
+        "Prioridad": "low",
+        "Tecnico": "Crysta Broomhall"
+    },
+    {
+        "ID Solicitud": 10,
+        "Cliente": "Ruthanne Garfirth",
+        "Estado": "Rechazado",
+        "Categoria": "Security",
+        "Fecha creación": "7/10/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Fayth Hens"
+    },
+    {
+        "ID Solicitud": 11,
+        "Cliente": "Eberhard Rusk",
+        "Estado": "Pendiente",
+        "Categoria": "Network",
+        "Fecha creación": "11/13/2023",
+        "Prioridad": "low",
+        "Tecnico": "Sarene Dourin"
+    },
+    {
+        "ID Solicitud": 12,
+        "Cliente": "Cate Sparke",
+        "Estado": "Cerrado",
+        "Categoria": "Software",
+        "Fecha creación": "10/4/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Vern Jirik"
+    },
+    {
+        "ID Solicitud": 13,
+        "Cliente": "Emili Rolfo",
+        "Estado": "Completado",
+        "Categoria": "Storage",
+        "Fecha creación": "1/28/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Lotti Aberdeen"
+    },
+    {
+        "ID Solicitud": 14,
+        "Cliente": "Beverley Briatt",
+        "Estado": "Rechazado",
+        "Categoria": "User Access",
+        "Fecha creación": "10/11/2023",
+        "Prioridad": "low",
+        "Tecnico": "Chadd Mayho"
+    },
+    {
+        "ID Solicitud": 15,
+        "Cliente": "Corey Marple",
+        "Estado": "Rechazado",
+        "Categoria": "Network",
+        "Fecha creación": "9/7/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Lyda Hattiff"
+    },
+    {
+        "ID Solicitud": 16,
+        "Cliente": "Lyndsay MacPeake",
+        "Estado": "Rechazado",
+        "Categoria": "Database",
+        "Fecha creación": "5/4/2023",
+        "Prioridad": "low",
+        "Tecnico": "Tomaso Rochford"
+    },
+    {
+        "ID Solicitud": 17,
+        "Cliente": "Patty Salamon",
+        "Estado": "Cerrado",
+        "Categoria": "Software",
+        "Fecha creación": "9/4/2023",
+        "Prioridad": "low",
+        "Tecnico": "Laurene Hendren"
+    },
+    {
+        "ID Solicitud": 18,
+        "Cliente": "Saul Desport",
+        "Estado": "Rechazado",
+        "Categoria": "Security",
+        "Fecha creación": "9/2/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Don Crush"
+    },
+    {
+        "ID Solicitud": 19,
+        "Cliente": "Cordy O'Fearguise",
+        "Estado": "Completado",
+        "Categoria": "Storage",
+        "Fecha creación": "4/25/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Sherlocke Wreiford"
+    },
+    {
+        "ID Solicitud": 20,
+        "Cliente": "Harwilll Allanson",
+        "Estado": "Pendiente",
+        "Categoria": "Storage",
+        "Fecha creación": "2/26/2023",
+        "Prioridad": "high",
+        "Tecnico": "Noll Riding"
+    },
+    {
+        "ID Solicitud": 21,
+        "Cliente": "Alleen Hellwich",
+        "Estado": "Completado",
+        "Categoria": "Hardware",
+        "Fecha creación": "2/2/2023",
+        "Prioridad": "high",
+        "Tecnico": "Dennison Aujouanet"
+    },
+    {
+        "ID Solicitud": 22,
+        "Cliente": "Edsel d'Escoffier",
+        "Estado": "En progreso",
+        "Categoria": "Database",
+        "Fecha creación": "7/26/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Ariadne Hartlebury"
+    },
+    {
+        "ID Solicitud": 23,
+        "Cliente": "Earle Hawkyens",
+        "Estado": "En progreso",
+        "Categoria": "Virtualization",
+        "Fecha creación": "3/16/2023",
+        "Prioridad": "high",
+        "Tecnico": "Egor Silby"
+    },
+    {
+        "ID Solicitud": 24,
+        "Cliente": "Charlie Fahrenbacher",
+        "Estado": "Cerrado",
+        "Categoria": "Network",
+        "Fecha creación": "8/1/2023",
+        "Prioridad": "high",
+        "Tecnico": "Binky Kimbly"
+    },
+    {
+        "ID Solicitud": 25,
+        "Cliente": "Reggie Muldrew",
+        "Estado": "Completado",
+        "Categoria": "Software",
+        "Fecha creación": "11/16/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Dalila Siely"
+    },
+    {
+        "ID Solicitud": 26,
+        "Cliente": "Barbi Peddie",
+        "Estado": "Cerrado",
+        "Categoria": "Application",
+        "Fecha creación": "4/10/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Fifi Port"
+    },
+    {
+        "ID Solicitud": 27,
+        "Cliente": "Tildie Mockford",
+        "Estado": "Rechazado",
+        "Categoria": "Hardware",
+        "Fecha creación": "1/28/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Nalani Outlaw"
+    },
+    {
+        "ID Solicitud": 28,
+        "Cliente": "Lotte Schoenrock",
+        "Estado": "Completado",
+        "Categoria": "User Access",
+        "Fecha creación": "3/24/2023",
+        "Prioridad": "low",
+        "Tecnico": "Janeczka Toyer"
+    },
+    {
+        "ID Solicitud": 29,
+        "Cliente": "Alfredo Byham",
+        "Estado": "Pendiente",
+        "Categoria": "Hardware",
+        "Fecha creación": "10/9/2023",
+        "Prioridad": "low",
+        "Tecnico": "Dionisio Estcourt"
+    },
+    {
+        "ID Solicitud": 30,
+        "Cliente": "Tamarah Colbron",
+        "Estado": "Cerrado",
+        "Categoria": "Security",
+        "Fecha creación": "12/17/2023",
+        "Prioridad": "low",
+        "Tecnico": "Tarrance Younge"
+    },
+    {
+        "ID Solicitud": 31,
+        "Cliente": "Nehemiah Hofler",
+        "Estado": "Cerrado",
+        "Categoria": "Network",
+        "Fecha creación": "2/26/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Nancey Gaydon"
+    },
+    {
+        "ID Solicitud": 32,
+        "Cliente": "Ronny Doyley",
+        "Estado": "Cancelado",
+        "Categoria": "Storage",
+        "Fecha creación": "12/22/2023",
+        "Prioridad": "high",
+        "Tecnico": "Constantina Mackness"
+    },
+    {
+        "ID Solicitud": 33,
+        "Cliente": "Sergeant Verrico",
+        "Estado": "Cerrado",
+        "Categoria": "User Access",
+        "Fecha creación": "8/6/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Marylee Kuhl"
+    },
+    {
+        "ID Solicitud": 34,
+        "Cliente": "Elianore Barosch",
+        "Estado": "Rechazado",
+        "Categoria": "Network",
+        "Fecha creación": "2/3/2023",
+        "Prioridad": "high",
+        "Tecnico": "Nari Ferruzzi"
+    },
+    {
+        "ID Solicitud": 35,
+        "Cliente": "Wolfy Goadby",
+        "Estado": "Completado",
+        "Categoria": "Hardware",
+        "Fecha creación": "1/1/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Wernher Curley"
+    },
+    {
+        "ID Solicitud": 36,
+        "Cliente": "Nathanil Matthieson",
+        "Estado": "Cancelado",
+        "Categoria": "Security",
+        "Fecha creación": "12/22/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Estel Gurden"
+    },
+    {
+        "ID Solicitud": 37,
+        "Cliente": "Daria Shelton",
+        "Estado": "Rechazado",
+        "Categoria": "Security",
+        "Fecha creación": "3/11/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Karrie Zupone"
+    },
+    {
+        "ID Solicitud": 38,
+        "Cliente": "Joannes Berthe",
+        "Estado": "Rechazado",
+        "Categoria": "Application",
+        "Fecha creación": "8/8/2023",
+        "Prioridad": "high",
+        "Tecnico": "Melina Boxell"
+    },
+    {
+        "ID Solicitud": 39,
+        "Cliente": "Lorene Viney",
+        "Estado": "Completado",
+        "Categoria": "Hardware",
+        "Fecha creación": "1/8/2023",
+        "Prioridad": "high",
+        "Tecnico": "Lorrie Roggero"
+    },
+    {
+        "ID Solicitud": 40,
+        "Cliente": "Consuela Sopp",
+        "Estado": "Pendiente",
+        "Categoria": "Virtualization",
+        "Fecha creación": "12/20/2023",
+        "Prioridad": "low",
+        "Tecnico": "Jocelyne Dickon"
+    },
+    {
+        "ID Solicitud": 41,
+        "Cliente": "Aleece Rugieri",
+        "Estado": "Rechazado",
+        "Categoria": "Application",
+        "Fecha creación": "2/26/2023",
+        "Prioridad": "low",
+        "Tecnico": "Jeannie Denisovo"
+    },
+    {
+        "ID Solicitud": 42,
+        "Cliente": "Kris Brader",
+        "Estado": "Pendiente",
+        "Categoria": "Software",
+        "Fecha creación": "5/24/2023",
+        "Prioridad": "high",
+        "Tecnico": "Gwendolin Fritschmann"
+    },
+    {
+        "ID Solicitud": 43,
+        "Cliente": "Boony Tibbles",
+        "Estado": "Cerrado",
+        "Categoria": "Software",
+        "Fecha creación": "5/21/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Maryellen Oaks"
+    },
+    {
+        "ID Solicitud": 44,
+        "Cliente": "Mirabelle Eberlein",
+        "Estado": "Rechazado",
+        "Categoria": "Backup",
+        "Fecha creación": "7/31/2023",
+        "Prioridad": "low",
+        "Tecnico": "Lanna Czaja"
+    },
+    {
+        "ID Solicitud": 45,
+        "Cliente": "Lina Lane",
+        "Estado": "Pendiente",
+        "Categoria": "User Access",
+        "Fecha creación": "10/27/2023",
+        "Prioridad": "low",
+        "Tecnico": "Shayne MacAskie"
+    },
+    {
+        "ID Solicitud": 46,
+        "Cliente": "Tatiania Thiese",
+        "Estado": "En progreso",
+        "Categoria": "Database",
+        "Fecha creación": "7/10/2023",
+        "Prioridad": "high",
+        "Tecnico": "Kamillah Tofanini"
+    },
+    {
+        "ID Solicitud": 47,
+        "Cliente": "Mara Couser",
+        "Estado": "Cancelado",
+        "Categoria": "Database",
+        "Fecha creación": "8/28/2023",
+        "Prioridad": "high",
+        "Tecnico": "Janey Giacomo"
+    },
+    {
+        "ID Solicitud": 48,
+        "Cliente": "Julianne Perulli",
+        "Estado": "Pendiente",
+        "Categoria": "Hardware",
+        "Fecha creación": "4/25/2023",
+        "Prioridad": "low",
+        "Tecnico": "Kassi Rankmore"
+    },
+    {
+        "ID Solicitud": 49,
+        "Cliente": "Maryanna Christene",
+        "Estado": "Cerrado",
+        "Categoria": "Backup",
+        "Fecha creación": "5/18/2023",
+        "Prioridad": "low",
+        "Tecnico": "Dell Nutten"
+    },
+    {
+        "ID Solicitud": 50,
+        "Cliente": "Inessa Featherstone",
+        "Estado": "Pendiente",
+        "Categoria": "Storage",
+        "Fecha creación": "9/29/2023",
+        "Prioridad": "low",
+        "Tecnico": "Paddy Morsey"
+    },
+    {
+        "ID Solicitud": 51,
+        "Cliente": "Bobbie Roycroft",
+        "Estado": "Completado",
+        "Categoria": "Storage",
+        "Fecha creación": "7/22/2023",
+        "Prioridad": "high",
+        "Tecnico": "Rancell Dorning"
+    },
+    {
+        "ID Solicitud": 52,
+        "Cliente": "Raquela Marle",
+        "Estado": "Pendiente",
+        "Categoria": "User Access",
+        "Fecha creación": "10/2/2023",
+        "Prioridad": "low",
+        "Tecnico": "Barrie Sayse"
+    },
+    {
+        "ID Solicitud": 53,
+        "Cliente": "Pattin Croson",
+        "Estado": "Cancelado",
+        "Categoria": "User Access",
+        "Fecha creación": "8/8/2023",
+        "Prioridad": "high",
+        "Tecnico": "Eziechiele Beisley"
+    },
+    {
+        "ID Solicitud": 54,
+        "Cliente": "Lin Tuffield",
+        "Estado": "En progreso",
+        "Categoria": "Storage",
+        "Fecha creación": "9/22/2023",
+        "Prioridad": "low",
+        "Tecnico": "Batholomew Varns"
+    },
+    {
+        "ID Solicitud": 55,
+        "Cliente": "Agace Andress",
+        "Estado": "Rechazado",
+        "Categoria": "Virtualization",
+        "Fecha creación": "2/16/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Hollyanne Daintier"
+    },
+    {
+        "ID Solicitud": 56,
+        "Cliente": "Aubine Strangeways",
+        "Estado": "En progreso",
+        "Categoria": "User Access",
+        "Fecha creación": "10/12/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Prissie Kencott"
+    },
+    {
+        "ID Solicitud": 57,
+        "Cliente": "Doria Fawdry",
+        "Estado": "Completado",
+        "Categoria": "Hardware",
+        "Fecha creación": "3/21/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Pepe Gerrit"
+    },
+    {
+        "ID Solicitud": 58,
+        "Cliente": "Frannie Theis",
+        "Estado": "Pendiente",
+        "Categoria": "Backup",
+        "Fecha creación": "7/11/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Ludovika Dmitrichenko"
+    },
+    {
+        "ID Solicitud": 59,
+        "Cliente": "Sadie Kohen",
+        "Estado": "En progreso",
+        "Categoria": "Backup",
+        "Fecha creación": "6/10/2023",
+        "Prioridad": "low",
+        "Tecnico": "Philbert Poinsett"
+    },
+    {
+        "ID Solicitud": 60,
+        "Cliente": "Sterne Westphal",
+        "Estado": "Cerrado",
+        "Categoria": "Backup",
+        "Fecha creación": "8/3/2023",
+        "Prioridad": "low",
+        "Tecnico": "Byram Toffalo"
+    },
+    {
+        "ID Solicitud": 61,
+        "Cliente": "Chandra Coulsen",
+        "Estado": "Completado",
+        "Categoria": "Application",
+        "Fecha creación": "3/17/2023",
+        "Prioridad": "low",
+        "Tecnico": "Sybila Toulch"
+    },
+    {
+        "ID Solicitud": 62,
+        "Cliente": "Maegan Hubner",
+        "Estado": "Cancelado",
+        "Categoria": "Virtualization",
+        "Fecha creación": "12/5/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Wenona Ruddoch"
+    },
+    {
+        "ID Solicitud": 63,
+        "Cliente": "Hesther Rides",
+        "Estado": "Rechazado",
+        "Categoria": "User Access",
+        "Fecha creación": "12/20/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Rycca Napleton"
+    },
+    {
+        "ID Solicitud": 64,
+        "Cliente": "Grenville Bryson",
+        "Estado": "Cancelado",
+        "Categoria": "User Access",
+        "Fecha creación": "5/18/2023",
+        "Prioridad": "low",
+        "Tecnico": "Findley Abbado"
+    },
+    {
+        "ID Solicitud": 65,
+        "Cliente": "Kimberlee Greenman",
+        "Estado": "Rechazado",
+        "Categoria": "Storage",
+        "Fecha creación": "10/26/2023",
+        "Prioridad": "high",
+        "Tecnico": "Kevon Schinetti"
+    },
+    {
+        "ID Solicitud": 66,
+        "Cliente": "Dede Seale",
+        "Estado": "En progreso",
+        "Categoria": "Network",
+        "Fecha creación": "8/23/2023",
+        "Prioridad": "low",
+        "Tecnico": "Herman Calfe"
+    },
+    {
+        "ID Solicitud": 67,
+        "Cliente": "Hali Bysshe",
+        "Estado": "Cerrado",
+        "Categoria": "User Access",
+        "Fecha creación": "2/23/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Nicola Mathelin"
+    },
+    {
+        "ID Solicitud": 68,
+        "Cliente": "Susie Thurling",
+        "Estado": "Pendiente",
+        "Categoria": "Storage",
+        "Fecha creación": "10/26/2023",
+        "Prioridad": "low",
+        "Tecnico": "Hunt Tunder"
+    },
+    {
+        "ID Solicitud": 69,
+        "Cliente": "Betty Nathon",
+        "Estado": "Rechazado",
+        "Categoria": "Storage",
+        "Fecha creación": "11/6/2023",
+        "Prioridad": "low",
+        "Tecnico": "Camella Croxon"
+    },
+    {
+        "ID Solicitud": 70,
+        "Cliente": "Bert Scipsey",
+        "Estado": "En progreso",
+        "Categoria": "Hardware",
+        "Fecha creación": "8/30/2023",
+        "Prioridad": "low",
+        "Tecnico": "Darill Eminson"
+    },
+    {
+        "ID Solicitud": 71,
+        "Cliente": "Marshal Castelletto",
+        "Estado": "Pendiente",
+        "Categoria": "Network",
+        "Fecha creación": "9/3/2023",
+        "Prioridad": "high",
+        "Tecnico": "Bren Verlinde"
+    },
+    {
+        "ID Solicitud": 72,
+        "Cliente": "Svend De Vries",
+        "Estado": "Cerrado",
+        "Categoria": "Virtualization",
+        "Fecha creación": "6/24/2023",
+        "Prioridad": "low",
+        "Tecnico": "Loren McKernon"
+    },
+    {
+        "ID Solicitud": 73,
+        "Cliente": "Bradford Gheerhaert",
+        "Estado": "Cancelado",
+        "Categoria": "Software",
+        "Fecha creación": "4/26/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Josefa Angrove"
+    },
+    {
+        "ID Solicitud": 74,
+        "Cliente": "Nikolaus Mennear",
+        "Estado": "En progreso",
+        "Categoria": "Application",
+        "Fecha creación": "11/26/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Teodoor Huc"
+    },
+    {
+        "ID Solicitud": 75,
+        "Cliente": "Conrade Langsdon",
+        "Estado": "Rechazado",
+        "Categoria": "Storage",
+        "Fecha creación": "11/8/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Emmey Finding"
+    },
+    {
+        "ID Solicitud": 76,
+        "Cliente": "Feliks Girdwood",
+        "Estado": "Cerrado",
+        "Categoria": "Security",
+        "Fecha creación": "11/12/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Carmelle Fawlks"
+    },
+    {
+        "ID Solicitud": 77,
+        "Cliente": "Wolf Royle",
+        "Estado": "Cancelado",
+        "Categoria": "Hardware",
+        "Fecha creación": "5/27/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Gordie Logg"
+    },
+    {
+        "ID Solicitud": 78,
+        "Cliente": "Pammy Stooders",
+        "Estado": "En progreso",
+        "Categoria": "Network",
+        "Fecha creación": "7/20/2023",
+        "Prioridad": "medium",
+        "Tecnico": "Sigrid Camm"
+    },
+    {
+        "ID Solicitud": 79,
+        "Cliente": "Kyle Ronchi",
+        "Estado": "Cancelado",
+        "Categoria": "Storage",
+        "Fecha creación": "6/5/2023",
+        "Prioridad": "low",
+        "Tecnico": "Perle Astles"
+    },
+    {
+        "ID Solicitud": 80,
+        "Cliente": "Any Ceaser",
+        "Estado": "Pendiente",
+        "Categoria": "Virtualization",
+        "Fecha creación": "11/1/2023",
+        "Prioridad": "low",
+        "Tecnico": "Gibby Christofol"
+    }
+]
