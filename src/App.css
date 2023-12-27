@@ -10,18 +10,6 @@
   height: 95vh;
 }
 
-.Home {
-  display: grid;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 1fr 5fr 7fr 1fr;
-  grid-template-rows: 4em  31em;
-  grid-template-areas:  "main  header  .  section"
-                        "main  aside  aside  aside"
-                        
-}
-
 .Est {
 display: grid;
 background: none ;
@@ -34,18 +22,6 @@ grid-template-areas:  "main  homeEst  section"
                       "main  .  .  "
 }
 
-.Cus {
-  display: grid;
-  background: none ;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 1fr 12fr 1fr;
-  grid-template-rows: 35em;
-  grid-template-areas:  "main  .  section"
-                        "main  .  .  "
-  }
-
 header{
   background-color: rgba(245, 245, 220, 0.788);
   width: 100%;
@@ -55,10 +31,6 @@ header{
   grid-area: header;
 }
 
-section{
-  grid-area: section;
-}
-
 main{
   background-color: rgba(245, 245, 220, 0.788);
   width: fit-content;
@@ -66,17 +38,6 @@ main{
   margin-bottom: 1px;
   grid-area: main;
 }
-
-aside{
-  border: 1px yellow;
-  background-color: rgba(245, 245, 220, 0.788);
-  width: 98%;
-  margin-top: 1px;
-  margin-right: 5px;
-  margin-bottom: 1px;
-  grid-area: aside;
-}
-
 
 body{
   background-image: url('./Imagenes/fondoprincipal.jpg');

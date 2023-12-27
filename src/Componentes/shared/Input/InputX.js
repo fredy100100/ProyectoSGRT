@@ -2,18 +2,24 @@ import React from "react";
 import "./InputX.css";
 
 export const InputX = ({
+  onChange,
+  value,
+  placeholder,
   children,
   type,
   nombre,
   register,
-  required = { value: undefined, message:""},
-  pattern = { value: undefined, message:""},
-  minLength = { value: undefined, message:""},
-  maxLength = { value: undefined, message:""}
+  required = { value: undefined, message: "" },
+  pattern = { value: undefined, message: "" },
+  minLength = { value: undefined, message: "" },
+  maxLength = { value: undefined, message: "" }
 }) => {
   return (
     <div className="Input-container">
       <input
+        onChange={onChange}
+        value={value}
+        placeholder={placeholder}
         type={type}
         {...register(nombre, {
           required: {

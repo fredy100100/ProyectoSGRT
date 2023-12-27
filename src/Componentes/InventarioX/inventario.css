@@ -1,16 +1,16 @@
-.users-container {
+.Inv {
     display: flex;
     gap: 20px;
 }
 
-.layout-users-container {
+.layout-inv-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
-.head-users-container {
+.head-inv-container {
     display: flex;
     position: fixed;
     top: 22px;
@@ -19,9 +19,8 @@
     justify-content:end;
 }
 
-.header-users-container {
+.header-inv-container {
     display: flex;
     width: 50vw;
     justify-content: space-between;
 }
-

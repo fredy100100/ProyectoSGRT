@@ -1,20 +1,26 @@
-import '../../App.css';
 import '../../Iconos.css';
-import { Aside } from './Aside';
-import {Main} from '../Main';
-// import { Menu } from '../shared/menu/menu';
-import { Header } from '../Home/Header';
+import { Main } from '../Main';
+import { Header } from '../shared/Header/Header';
 import { Section } from '../Section';
-
+import { SimpleTable } from '../shared/simpleTable/simpleTable';
+import data from './MOCK_DATA Requerimientos.json';
+import { columns } from './mockhome';
+import './Home.css'
 
 function Home() {
   return (
-    <div className="Home">
-      <Header />
-      <Section />
-      <Aside />
-      {/* <Menu /> */}
-      <Main/>       
+    <div className="home-container">
+      <Main></Main>
+      <div className='layout-home-container'>
+        <div className='head-home-container'>
+          <div className='header-home-container'>
+          </div>
+        </div>
+        <SimpleTable columns={columns} data={data} titulo="Requerimientos" />
+      </div>
+
+
+
 
     </div>
 

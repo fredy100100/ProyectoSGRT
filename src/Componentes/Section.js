@@ -36,14 +36,11 @@ export const Section = () => {
         </Modal.Body>
         <Modal.Footer>
           
-          <Link to={"/Inicio"}>
+          <Link to={"/login"}>
         <button className="btn btn-secondary" onClick={closeModal}>
             Cerrar Sesion
           </button>
           </Link>
-          <button className="btn btn-secondary" onClick={closeModal}>
-            Cerrar Ventana
-          </button>
         </Modal.Footer>
       </Modal>
     </section>

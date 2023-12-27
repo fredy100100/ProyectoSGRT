@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./Componentes/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Estadisticas } from "./Componentes/Estadisticas/Estadisticas";
-import { Inventario } from "./Componentes/Inventario";
+import { Inventario } from "./Componentes/InventarioX/Inventario";
 import { Usuarios } from "./Componentes/Usuarios/Usuarios";
 import { Login } from "./Componentes/login/login";
 
