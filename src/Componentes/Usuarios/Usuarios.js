@@ -14,10 +14,11 @@ export const Usuarios = () => {
       <div className="layout-users-container">
         <div className="head-users-container">
           <div className="header-users-container">
-            <Header nombre="usuario" />
+            {/* <Header nombre="usuario" /> */}
+            <CrearPersona />
+            <Section></Section>
           </div>
-          <CrearPersona />
-          <Section />
+
         </div>
         <div className="table-content">
           <SimpleTable columns={columns} data={data} titulo="Usuarios"></SimpleTable>

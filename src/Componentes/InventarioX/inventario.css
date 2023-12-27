@@ -12,10 +12,15 @@
 
 .head-inv-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    top: 22px;
+    right: 40px;
+    width: 60vw;
+    justify-content:end;
 }
 
 .header-inv-container {
-    max-width: 550px;
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
 }

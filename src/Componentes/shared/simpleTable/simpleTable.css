@@ -143,3 +143,14 @@ tbody tr:hover {
     opacity: 1;
     right: 0;
 }
+
+
+.input-table {
+    width: 250px;
+    margin: 20px;
+    border-radius: .5rem;
+    border: none;
+    padding: 2px;
+    padding-left: 10px;
+    outline: none;
+}

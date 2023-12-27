@@ -14,9 +14,7 @@ function Home() {
       <div className='layout-home-container'>
         <div className='head-home-container'>
           <div className='header-home-container'>
-            <Header nombre="requerimiento"/>
           </div>
-          <Section />
         </div>
         <SimpleTable columns={columns} data={data} titulo="Requerimientos" />
       </div>
