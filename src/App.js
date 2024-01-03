@@ -27,7 +27,7 @@ const Container = styled.div`
   transition: all 0.3s;
 
   &.active {
-    grid-template-columns: 300px auto;
+    grid-template-columns: 220px auto;
   }
 `;
 

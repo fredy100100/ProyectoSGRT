@@ -1,5 +1,4 @@
-import { Main } from "../Main";
-import { Section } from "../Section";
+  import { Section } from "../Section";
 import "../../App.css";
 import { HomeEst } from "../shared/barrs/HomeEst"
 import "../Estadisticas/Estadisticas.css"
@@ -7,8 +6,6 @@ import "../Estadisticas/Estadisticas.css"
 export const Estadisticas = () => {
   return (
     <div className="Est">
-      
-      <Main />
       <div className="HomeEst-container">
         <HomeEst></HomeEst>
       </div>    

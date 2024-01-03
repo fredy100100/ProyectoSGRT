@@ -9,7 +9,7 @@
 
 .App {
   margin: 10px;
-  height: 95vh;
+  height: 93vh;
 }
 
 .Est {
@@ -18,10 +18,10 @@ background: none ;
 width: 98%;
 margin-left: auto;
 margin-right: auto;
-grid-template-columns: 1fr 12fr 1fr;
+grid-template-columns: 13fr 1fr;
 grid-template-rows: 35em;
-grid-template-areas:  "main  homeEst  section"
-                      "main  .  .  "
+grid-template-areas:  "homeEst  homeEst  section"
+                      "homeEst  homeEst  .  "
 }
 
 header{

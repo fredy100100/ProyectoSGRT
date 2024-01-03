@@ -28,8 +28,8 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     <NavLink to={to} className={({ isActive }) => `Links${isActive ? ` active` : ``}`}>
                         <div className='linkIcon'>
                             {icon}
-                            {sidebarOpen && (<span>{label}</span>)}
                         </div>
+                        {sidebarOpen && (<span>{label}</span>)}
                     </NavLink>
                 </div>
             ))}
@@ -41,9 +41,12 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 const Container = styled.div`
 
     color: ${Light.text};
-    background: rgb(255,255,255);
+    background: #fff6;
     position: sticky;
     padding-top: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0.4rem 0.8rem #0005;
 
     .sidebarButton {
         position: absolute;
@@ -89,7 +92,7 @@ const Container = styled.div`
         display: ${({ isOpen }) => (!isOpen ? `none` : `block`)};
         margin-left: 5px;
         font-family: "Poppins";
-        color: #0098be;
+        color: ${Light.bg}  ;
         }
     }
 
@@ -104,8 +107,8 @@ const Container = styled.div`
             display: flex;
             align-items: center;
             text-decoration: none;
-            padding: calc(${v.smSpacing}-2px) 0;
-            color: ${Light.text};
+            padding-left: 4px;
+            color: rgb(22, 58, 131);
 
             .linkIcon{
                 padding: ${v.smSpacing} ${v.smSpacing};
@@ -115,10 +118,9 @@ const Container = styled.div`
                     }
             }
         &.active {
-            .linkIcon {
-                    svg {
-                        color: ${Light.bg4}
-                    }
+
+            color: ${Light.bg};
+
             }
         }
             }
