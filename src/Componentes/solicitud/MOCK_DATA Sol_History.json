@@ -1,0 +1,42 @@
+[
+    {
+        "ID Solicitud": 1,
+        "Tecnico": "Brandice Atlee",
+        "Estado": "Cancelado",
+        "Categoria": "Redes",
+        "Fecha creación": "6/30/2023",
+        "Fecha cierre": "4/11/2023"
+    },
+    {
+        "ID Solicitud": 2,
+        "Tecnico": "Scotti Beake",
+        "Estado": "Completado",
+        "Categoria": "Redes",
+        "Fecha creación": "3/17/2023",
+        "Fecha cierre": "9/20/2023"
+    },
+    {
+        "ID Solicitud": 3,
+        "Tecnico": "Frederich Rutgers",
+        "Estado": "En progreso",
+        "Categoria": "Hardware",
+        "Fecha creación": "3/5/2023",
+        "Fecha cierre": "10/16/2023"
+    },
+    {
+        "ID Solicitud": 4,
+        "Tecnico": "Valdemar Connew",
+        "Estado": "Cancelado",
+        "Categoria": "Almacenamiento",
+        "Fecha creación": "2/1/2023",
+        "Fecha cierre": "4/3/2023"
+    },
+    {
+        "ID Solicitud": 5,
+        "Tecnico": "Vladamir Ireland",
+        "Estado": "En progreso",
+        "Categoria": "Seguridad",
+        "Fecha creación": "6/24/2023",
+        "Fecha cierre": "2/16/2023"
+    }
+]

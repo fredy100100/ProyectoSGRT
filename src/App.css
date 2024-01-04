@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,6 @@
 
 .App {
   margin: 10px;
-  height: 95vh;
 }
 
 .Est {
@@ -16,10 +17,10 @@ background: none ;
 width: 98%;
 margin-left: auto;
 margin-right: auto;
-grid-template-columns: 1fr 12fr 1fr;
+grid-template-columns: 13fr 1fr;
 grid-template-rows: 35em;
-grid-template-areas:  "main  homeEst  section"
-                      "main  .  .  "
+grid-template-areas:  "homeEst  homeEst  section"
+                      "homeEst  homeEst  .  "
 }
 
 header{

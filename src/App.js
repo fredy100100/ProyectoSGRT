@@ -1,25 +1,35 @@
+import { BrowserRouter } from "react-router-dom";
+import { MyRoutes } from "./Componentes/routers/routers";
+import styled from "styled-components";
 import "./App.css";
-import Home from "./Componentes/Home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Estadisticas } from "./Componentes/Estadisticas/Estadisticas";
-import { Inventario } from "./Componentes/InventarioX/Inventario";
-import { Usuarios } from "./Componentes/Usuarios/Usuarios";
-import { Login } from "./Componentes/login/login";
+import { Sidebar } from "./Componentes/shared/sidebar/sidebar";
+import { useState } from "react";
 
 function App() {
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/Estadisticas" element={<Estadisticas />}></Route>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/Inventario" element={<Inventario />}></Route>
-          <Route path="/Usuarios" element={<Usuarios />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-        </Routes>
-      </Router>
+      <BrowserRouter>
+        <Container className={sidebarOpen ? "sidebarState active" : "sidebarState"}>
+            <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+            <MyRoutes />
+        </Container>
+      </BrowserRouter>
     </div>
   );
 }
 
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 90px auto;
+  transition: all 0.3s;
+
+  &.active {
+    grid-template-columns: 220px auto;
+  }
+`;
+
 export default App;
+

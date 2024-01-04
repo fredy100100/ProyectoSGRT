@@ -77,14 +77,15 @@ export const SimpleTable = ({ columns, data, titulo }) => {
                             }
                         </tbody>
                     </table>
-                    <div className='table-navegation'>
+                    
+
+                </div>
+                <div className='table-navegation'>
                         <button onClick={() => table.setPageIndex(0)}><span className='span1'></span>Primera</button>
                         <button onClick={() => table.previousPage()}><span className='span2'></span>Anterior</button>
                         <button onClick={() => table.nextPage()}>Siguiente<span className='span3'></span></button>
                         <button onClick={() => table.setPageIndex(table.getPageCount() - 1)}>Ultima<span className='span4'></span></button>
                     </div>
-
-                </div>
             </div>
         </>
     )

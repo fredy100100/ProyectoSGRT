@@ -1,4 +1,3 @@
-import { Main } from "../Main";
 import { Section } from "../Section";
 import "./usuarios.css";
 import { Header } from "../shared/Header/Header"
@@ -10,7 +9,6 @@ import data from './MOCK_DATA.json'
 export const Usuarios = () => {
   return (
     <div className="users-container">
-      <Main />
       <div className="layout-users-container">
         <div className="head-users-container">
           <div className="header-users-container">

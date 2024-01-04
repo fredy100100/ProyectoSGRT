@@ -136,64 +136,6 @@ export const CrearPersona = () => {
                             </InputX>
                         </div>
                         <InputX
-                            type="email"
-                            nombre="correo"
-                            register={register}
-                            required={{
-                                value: true,
-                                message: "Ingresa el correo electronico por favor",
-                            }}
-                        >
-                            Correo Electronico
-                        </InputX>
-                        {
-                            errors.correo && <span>{errors.correo.message}</span>
-                        }
-                        <div className="inputs-container">
-                            <div className="input1-container">
-                                <InputX
-                                    type="text"
-                                    nombre="numeroCelular"
-                                    register={register}
-                                    setValue={setValue}
-                                    pattern={{
-                                        value: /^\d*$/,
-                                        message: "Ingrese solo numeros"
-                                    }}
-                                    minLength={{
-                                        value: 10,
-                                        message: "Debe tener mas de 10 caracteres"
-                                    }}
-                                    maxLength={{
-                                        value: 10,
-                                        message: "No puede ser mayor a 10 caracteres"
-                                    }}
-                                >
-                                    Celular
-                                </InputX>
-                                {
-                                    errors.numeroCelular && <span>{errors.numeroCelular.message}</span>
-                                }
-                            </div>
-                            <div className="input1-container">
-                                <SelectX
-                                    className="select-container"
-                                    options={rol}
-                                    name="tipoRol"
-                                    register={register}
-                                    setValue={setValue}
-                                    required={{
-                                        value: true,
-                                        message: "Selecciona el Rol por favor",
-                                    }} >
-                                    Rol
-                                </SelectX>
-                                {
-                                    errors.tipoRol && <span>{errors.tipoRol.message}</span>
-                                }
-                            </div>
-                        </div>
-                        <InputX
                             type="text"
                             nombre="cargoPersona"
                             register={register}
@@ -243,6 +185,64 @@ export const CrearPersona = () => {
                                 }
                             </div>
                         </div>
+                        <div className="inputs-container">
+                            <div className="input1-container">
+                                <InputX
+                                    type="text"
+                                    nombre="numeroCelular"
+                                    register={register}
+                                    setValue={setValue}
+                                    pattern={{
+                                        value: /^\d*$/,
+                                        message: "Ingrese solo numeros"
+                                    }}
+                                    minLength={{
+                                        value: 10,
+                                        message: "Debe tener mas de 10 caracteres"
+                                    }}
+                                    maxLength={{
+                                        value: 10,
+                                        message: "No puede ser mayor a 10 caracteres"
+                                    }}
+                                >
+                                    Celular
+                                </InputX>
+                                {
+                                    errors.numeroCelular && <span>{errors.numeroCelular.message}</span>
+                                }
+                            </div>
+                            <div className="input1-container">
+                                <SelectX
+                                    className="select-container"
+                                    options={rol}
+                                    name="tipoRol"
+                                    register={register}
+                                    setValue={setValue}
+                                    required={{
+                                        value: true,
+                                        message: "Selecciona el Rol por favor",
+                                    }} >
+                                    Rol
+                                </SelectX>
+                                {
+                                    errors.tipoRol && <span>{errors.tipoRol.message}</span>
+                                }
+                            </div>
+                        </div>
+                        <InputX
+                            type="email"
+                            nombre="correo"
+                            register={register}
+                            required={{
+                                value: true,
+                                message: "Ingresa el correo electronico por favor",
+                            }}
+                        >
+                            Correo Electronico
+                        </InputX>
+                        {
+                            errors.correo && <span>{errors.correo.message}</span>
+                        }
                         <InputX
                             type="hidden"
                             nombre="password"

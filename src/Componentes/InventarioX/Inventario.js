@@ -11,7 +11,6 @@ export const Inventario = () => {
 
   return (
     <div className="Inv">
-      <Main />
       <div className="layout-inv-container">
         <div className="head-inv-container">
           <div className="header-inv-container">
