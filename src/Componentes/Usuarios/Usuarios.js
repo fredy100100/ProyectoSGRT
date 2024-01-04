@@ -1,4 +1,3 @@
-import { Main } from "../Main";
 import { Section } from "../Section";
 import "./usuarios.css";
 import { Header } from "../shared/Header/Header"
