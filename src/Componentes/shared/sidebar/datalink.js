@@ -13,7 +13,7 @@ export const linksArray = [
     {
         label: "Solicitudes",
         icon: <BiMessageRoundedAdd />,
-        to: "/Solicitud"
+        to: "/Solicitudes"
     },
     {
         label: "Usuarios",
