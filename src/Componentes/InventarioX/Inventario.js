@@ -6,6 +6,8 @@ import { Header } from "../shared/Header/Header"
 import { CrearActivo } from "./crearactivo/crearactivo";
 import "./inventario.css";
 import { SimpleTable } from "../shared/simpleTable/simpleTable";
+import { InputTable } from '../shared/inputTable/inputTable';
+import { BotonesNav } from "../shared/tablenavegation/botonesNav";
 
 export const Inventario = () => {
 
@@ -21,7 +23,8 @@ export const Inventario = () => {
 
         </div>
         <div className="table-content">
-          <SimpleTable columns={headTableActivos} data={data} titulo="Activos" />
+          <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={headTableActivos} data={data} titulo="Activos" >
+          </SimpleTable>
         </div>
       </div>
     </div>

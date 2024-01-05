@@ -10,14 +10,15 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Container className={sidebarOpen ? "sidebarState active" : "sidebarState"}>
-            <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+      <div className="App">
+        <BrowserRouter>
+          <Container className={sidebarOpen ? "sidebarState active" : "sidebarState"}>
+            <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             <MyRoutes />
-        </Container>
-      </BrowserRouter>
-    </div>
+          </Container>
+        </BrowserRouter>
+      </div>
+
   );
 }
 
