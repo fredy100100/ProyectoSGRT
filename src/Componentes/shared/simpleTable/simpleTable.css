@@ -1,4 +1,8 @@
 .tablaReusable {
+    height: 100%;
+    width: 100%;
+}
+.table-container {
     height: fit-content;
     background-color: #fff5;
     /* backdrop-filter: blur(7px); */
@@ -59,96 +63,4 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: #fff6;
-}
-
-.table-navegation {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    margin-bottom: 0.6rem;
-    font-size: 12px;
-}
-
-.table-navegation button { 
-    top: 50%;
-    left: 50%;
-    background: #1766dc;
-    border: none;
-    color: white;
-    text-align: center;
-    padding: 4px;
-    width: 80px;
-    cursor: pointer;
-    transition: all 0.5s;
-    border-radius: 100px;
-}
-
-.table-navegation button span { 
-    cursor: pointer;
-    display: inline-block;
-    transition: 0.5s;
-}
-
-.table-navegation button .span1::after { 
-    content: "\00ab";
-    opacity: 0;
-    top: 0;
-    right: -10px;
-    transition: 0.5s;
-}
-
-.table-navegation button .span2::after { 
-    content: "\2039";
-    opacity: 0;
-    top: 0;
-    right: -10px;
-    transition: 0.5s;
-}
-
-.table-navegation button .span3::after { 
-    content: "\203a";
-    opacity: 0;
-    top: 0;
-    right: -10px;
-    transition: 0.5s;
-}
-
-.table-navegation button .span4::after { 
-    content: "\00bb";
-    opacity: 0;
-    top: 0;
-    right: -10px;
-    transition: 0.5s;
-}
-
-.table-navegation button:hover .span1 {
-    padding-right: 12px;
-}
-
-.table-navegation button:hover .span2 {
-    padding-right: 12px;
-}
-
-.table-navegation button:hover .span3 {
-    padding-left: 12px;
-}
-
-.table-navegation button:hover .span4 {
-    padding-left: 12px;
-}
-
-.table-navegation button:hover span::after {
-    opacity: 1;
-    right: 0;
-}
-
-
-.input-table {
-    width: 250px;
-    margin: 20px;
-    border-radius: .5rem;
-    border: none;
-    padding: 2px;
-    padding-left: 10px;
-    outline: none;
 }

@@ -4,11 +4,13 @@ import { Inventario } from "../InventarioX/Inventario";
 import { Estadisticas } from "../Estadisticas/Estadisticas";
 import { Usuarios } from "../Usuarios/Usuarios";
 import { Solicitudes } from "../solicitud/solicitudes";
+import { Login } from "../login/login"
 
 export const MyRoutes = () => {
 
     return (
             <Routes>
+                <Route path="/Login" element={<Login/>}/>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/Solicitudes" element={<Solicitudes/>} />
                 <Route path="/Usuarios" element={<Usuarios/>}/>
