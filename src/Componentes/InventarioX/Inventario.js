@@ -12,21 +12,29 @@ import { BotonesNav } from "../shared/tablenavegation/botonesNav";
 export const Inventario = () => {
 
   return (
-    <div className="Inv">
-      <div className="layout-inv-container">
-        <div className="head-inv-container">
-          <div className="header-inv-container">
-            {/* <Header nombre="inventario" /> */}
-            <CrearActivo />
-            <Section />
-          </div>
 
-        </div>
-        <div className="table-content">
-          <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={headTableActivos} data={data} titulo="Activos" >
-          </SimpleTable>
-        </div>
+    <SimpleTable columns={headTableActivos} data={data} navegacion={<BotonesNav />} titulo="Activos">
+      <div className="header-inventario">
+        <InputTable></InputTable>
+        <CrearActivo></CrearActivo>
+        <Section></Section>
       </div>
-    </div>
+    </SimpleTable>
+    // <div className="Inv">
+    //   <div className="layout-inv-container">
+    //     <div className="head-inv-container">
+    //       <div className="header-inv-container">
+    //         {/* <Header nombre="inventario" /> */}
+    //         <CrearActivo />
+    //         <Section />
+    //       </div>
+
+    //     </div>
+    //     <div className="table-content">
+    //       <SimpleTable navegacion={<BotonesNav />} columns={headTableActivos} data={data} titulo="Activos" >
+    //       </SimpleTable>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };

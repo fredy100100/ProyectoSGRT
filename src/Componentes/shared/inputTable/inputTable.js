@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Context } from '../simpleTable/simpleTable';
 import './inputTable.css';
 
-export const InputTable = (props) => {
+export const InputTable = () => {
 
     const { setFiltering, filtering } = useContext(Context);
 

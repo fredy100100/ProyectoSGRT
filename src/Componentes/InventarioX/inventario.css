@@ -1,26 +1,4 @@
-.Inv {
+.header-inventario {
     display: flex;
-    gap: 20px;
-}
-
-.layout-inv-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.head-inv-container {
-    display: flex;
-    position: fixed;
-    top: 22px;
-    right: 40px;
-    width: 60vw;
-    justify-content:end;
-}
-
-.header-inv-container {
-    display: flex;
-    width: 50vw;
     justify-content: space-between;
 }

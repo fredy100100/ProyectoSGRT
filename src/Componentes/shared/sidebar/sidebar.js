@@ -47,6 +47,7 @@ const Container = styled.div`
     margin-right: 20px;
     border-radius: 15px;
     box-shadow: 0 0.4rem 0.8rem #0005;
+    height: 95vh;
 
     .sidebarButton {
         position: absolute;

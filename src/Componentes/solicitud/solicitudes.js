@@ -3,12 +3,16 @@ import { BotonX } from '../shared/BotonX/BotonX';
 import { columns } from './mock'
 import data from './MOCK_DATA Sol_History.json';
 import './solicitudes.css';
+import { Section } from '../Section';
 
 export const Solicitudes = () => {
 
     return (
 
         <div className="solicitudes-container">
+            <div className='header-solicitudes'>
+                <Section></Section>
+            </div>
             <div className="solicitud">
                 <div className="generar-modificar">
                     <BotonX>Generar solicitud</BotonX>

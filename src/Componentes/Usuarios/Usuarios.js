@@ -10,20 +10,28 @@ import { InputTable } from "../shared/inputTable/inputTable";
 
 export const Usuarios = () => {
   return (
-    <div className="users-container">
-      <div className="layout-users-container">
-        <div className="head-users-container">
-          <div className="header-users-container">
-            <CrearPersona />
-            <Section></Section>
-          </div>
 
-        </div>
-        <div className="table-content">
-          <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={columns} data={data} titulo="Usuarios">
-          </SimpleTable>
-        </div>
+    <SimpleTable columns={columns} data={data} navegacion={<BotonesNav />} titulo="Usuarios">
+      <div className="header-users">
+        <InputTable />
+        <CrearPersona />        
+        <Section />
       </div>
-    </div>
+    </SimpleTable>
+    // <div className="users-container">
+    //   <div className="layout-users-container">
+    //     <div className="head-users-container">
+    //       <div className="header-users-container">
+    //         <CrearPersona />
+    //         <Section></Section>
+    //       </div>
+
+    //     </div>
+    //     <div className="table-content">
+    //       <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={columns} data={data} titulo="Usuarios">
+    //       </SimpleTable>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };

@@ -14,6 +14,7 @@ export const BotonX = ({className, children, onClick, type}) => {
 
 const ContenedorBotones = styled.div`
   display: flex;
+  margin-top: 10px;
 `
 const Boton = styled.button`
   padding: 10px 30px;

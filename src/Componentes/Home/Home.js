@@ -10,15 +10,29 @@ import './Homex.css'
 
 export const Home = () => {
   return (
-    <div className="home-container">
-      <div className='layout-home-container'>
-        <div className='head-home-container'>
-          <div className='header-home-container'>
-          </div>
-        </div>
-        <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={columns} data={data} titulo="Requerimientos" />
+
+    <SimpleTable className="table-home" columns={columns} data={data} navegacion={<BotonesNav />} titulo="Requerimientos">
+      <div className='header-requisitos'>
+        <InputTable></InputTable>
+        <Section></Section>
       </div>
-    </div>
+
+    </SimpleTable>
+
+
+
+
+
+
+    // <div className="home-container">
+    //   <div className='layout-home-container'>
+    //     <div className='head-home-container'>
+    //       <div className='header-home-container'>
+    //       </div>
+    //     </div>
+    //     <SimpleTable columns={columns} data={data} titulo="Requerimientos" />
+    //   </div>
+    // </div>
 
   );
 }
