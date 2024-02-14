@@ -14,12 +14,12 @@ export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     const isActive = Location.pathname;
     return (
         <Container isOpen={sidebarOpen}>
-            <button className='sidebarButton' onClick={modSidebarOpen}>
+            {/* <button className='sidebarButton' >
                 <IoIosArrowBack />
-            </button>
+            </button> */}
             <div className='Logocontent'>
-                <div className='imgcontent'>
-                    <img src={logo}></img>
+                <div className='imgcontent' >
+                    <img src={logo} onClick={modSidebarOpen} ></img>
                 </div>
                 <h3>SGRT</h3>
             </div>
@@ -82,10 +82,12 @@ const Container = styled.div`
 
         .imgcontent {
             display: flex;
+            cursor: pointer;
 
             img {
                 max-width: 40px;
                 height: auto;
+                
             } 
         }
 
