@@ -3,15 +3,21 @@ import { BotonX } from '../shared/BotonX/BotonX';
 import { columns } from './mock'
 import data from './MOCK_DATA Sol_History.json';
 import './solicitudes.css';
+import { CrearSolicitud } from './CrearSolicitud/crearsolicitud';
+import axios from "axios"
 
 export const Solicitudes = () => {
+
+    const data = async () => {
+        const response = await axios.get ()
+    }
 
     return (
 
         <div className="solicitudes-container">
             <div className="solicitud">
                 <div className="generar-modificar">
-                    <BotonX>Generar solicitud</BotonX>
+                    <CrearSolicitud>Generar solicitud</CrearSolicitud>
                     <p>Para recibir asistencia técnica, genera tu solicitud y comienza el proceso de inmediato.</p>
                 </div>
                 <div className="generar-modificar">
