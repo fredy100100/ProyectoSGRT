@@ -7,8 +7,25 @@ import { SimpleTable } from "../shared/simpleTable/simpleTable";
 import { BotonesNav } from "../shared/tablenavegation/botonesNav";
 import data from './MOCK_DATA.json'
 import { InputTable } from "../shared/inputTable/inputTable";
+import axios from 'axios';
+import { React, useState, useEffect} from 'react'
 
 export const Usuarios = () => {
+
+  const [isData, setIsData] = useState({})
+
+  useEffect(() =>{
+
+    const datos = async () => {
+      const resp = await axios.get('http://localhost:8080/users')
+      const info = resp.data
+      return setIsData(info)
+    }
+    datos()
+
+  }, [])
+
+  console.log(isData)
   return (
     <div className="users-container">
       <div className="layout-users-container">
@@ -20,7 +37,7 @@ export const Usuarios = () => {
 
         </div>
         <div className="table-content">
-          <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={columns} data={data} titulo="Usuarios">
+          <SimpleTable filtro={<InputTable />} columns={columns} data={isData} titulo="Usuarios">
           </SimpleTable>
         </div>
       </div>

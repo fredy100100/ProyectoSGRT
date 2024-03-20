@@ -23,7 +23,7 @@ export const Inventario = () => {
 
         </div>
         <div className="table-content">
-          <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={headTableActivos} data={data} titulo="Activos" >
+          <SimpleTable filtro={<InputTable />} columns={headTableActivos} data={data} titulo="Activos" >
           </SimpleTable>
         </div>
       </div>

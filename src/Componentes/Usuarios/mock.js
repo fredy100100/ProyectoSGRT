@@ -1,32 +1,32 @@
 export const columns = [
   {
     header: "Tipo Id",
-    accessorKey: 'TipoId'
+    accessorKey: 'iddoc'
   },
   {
     header: "Numero Id",
-    accessorKey: 'NumeroId'
+    accessorKey: 'nodoc'
   },
   {
     header: "Nombre Completo",
     accessorFn: row => `
-    ${row.PrimerNombre} 
-    ${row.SegundoNombre} 
-    ${row.PrimerApellido} 
-    ${row.SegundoApellido}
+    ${row.pnom} 
+    ${row.snom} 
+    ${row.sape} 
+    ${row.pape}
     `
   },
   {
     header: "Correo",
-    accessorKey: 'Correo'
+    accessorKey: 'correo'
   },
   {
     header: "Celular",
-    accessorKey: 'Celular'
+    accessorKey: 'celular'
   },
   {
-    header: "Rol",
-    accessorKey: 'Rol'
+    header: "Cargo",
+    accessorKey: 'idcargo'
   }
 ]
 
