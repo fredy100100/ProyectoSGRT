@@ -11,7 +11,7 @@ export const Usuarios = () => {
 
   const [isData, setIsData] = useState({})
 
-  useEffect(() =>{
+  useEffect(() => {
 
     const datos = async () => {
       const resp = await axios.get('http://localhost:8080/users')
@@ -22,7 +22,6 @@ export const Usuarios = () => {
 
   }, [])
 
-  console.log(isData)
   return (
     <div className="users-container">
       <div className="layout-users-container">
