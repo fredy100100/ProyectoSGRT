@@ -7,7 +7,7 @@ import {
     getFilteredRowModel
 } from '@tanstack/react-table';
 import './simpleTable.css';
-import React, { Children, useState } from 'react';
+import React, { useState } from 'react';
 import { BotonesNav } from '../tablenavegation/botonesNav'
 
 export const Context = React.createContext();

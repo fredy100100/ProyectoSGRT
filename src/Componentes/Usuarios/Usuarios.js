@@ -1,11 +1,8 @@
 import { Section } from "../Section";
 import "./usuarios.css";
-import { Header } from "../shared/Header/Header"
 import { columns } from "./mock"
 import { CrearPersona } from "./CrearPersona/crearpersona";
 import { SimpleTable } from "../shared/simpleTable/simpleTable";
-import { BotonesNav } from "../shared/tablenavegation/botonesNav";
-import data from './MOCK_DATA.json'
 import { InputTable } from "../shared/inputTable/inputTable";
 import axios from 'axios';
 import { React, useState, useEffect} from 'react'
