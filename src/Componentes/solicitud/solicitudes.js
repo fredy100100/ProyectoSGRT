@@ -4,13 +4,9 @@ import { columns } from './mock'
 import data from './MOCK_DATA Sol_History.json';
 import './solicitudes.css';
 import { CrearSolicitud } from './CrearSolicitud/crearsolicitud';
-import axios from "axios"
+
 
 export const Solicitudes = () => {
-
-    const data = async () => {
-        const response = await axios.get ()
-    }
 
     return (
 

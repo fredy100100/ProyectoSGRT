@@ -1,30 +1,30 @@
 export const columns = [
     {
         header: "ID Solicitud",
-        accessorKey: 'ID Solicitud'
+        accessorKey: 'idsol'
     },
     {
         header: "Cliente",
-        accessorKey: 'Cliente'
+        accessorKey: 'nodoccliente'
     },
     {
         header: "Estado",
-        accessorKey: 'Estado'
+        accessorKey: 'idest'
     },
     {
         header: "Categoria",
-        accessorKey: 'Categoria'
+        accessorKey: 'idcat'
     },
     {
         header: "Fecha creación",
-        accessorKey: 'Fecha creación'
+        accessorKey: 'fechacre'
     },
     {
         header: "Prioridad",
-        accessorKey: 'Prioridad'
+        accessorKey: 'prio'
     },
     {
         header: "Tecnico",
-        accessorKey: 'Tecnico'
+        accessorKey: 'nodoctecnico'
     },
 ]
