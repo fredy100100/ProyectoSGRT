@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ModalX } from "../../shared/ModalX/ModalX";
 import { SelectX } from "../../shared/SelectX/SelectX";
 import { InputX } from "../../shared/Input/InputX";
-import { tipoIdentificacion, rol, area, sede } from "../mock";
 import { BotonX } from "../../shared/BotonX/BotonX";
 import { Form } from "../../shared/Form/Form";
 import { useForm } from "react-hook-form"
