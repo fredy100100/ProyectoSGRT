@@ -15,19 +15,23 @@ export const CrearPersona = () => {
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
     const [cargosData, setCargosData] = useState({})
     const [tiposDocData, setTiposDocData] = useState({})
+    const [sedes, setSedes] = useState({})
+    const [roles, setRoles] = useState({})
 
     const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm({
         mode: "onChange",
         defaultValues: {
-            pass: "Colombia2023."
+            pass: "Colombia2023.",
+            estado: true
         },
     });
 
     const onSubmit = handleSubmit((data) => {
-        const enviarSolicitud = async () => {
-            const usuario = await axios.post('http://localhost:8080/create')
-        }
-        enviarSolicitud(data)
+       const createUser = async (user) => {
+        // const infoUser = await axios.post('http://localhost:8080/create', user)
+        console.log(user)
+       }
+        createUser(data)
         // reset();
     });
 
@@ -54,6 +58,28 @@ export const CrearPersona = () => {
             setTiposDocData(infotiposDoc)
         }
         listTiposDoc()
+
+        //LISTAR SEDES
+        const listSedes = async () => {
+            const sede = await axios.get('http://localhost:8080/sedes')
+            const infoSedes = sede.data.map(item => ({
+                value: item.idsede,
+                label: item.nombre
+            }))
+            setSedes(infoSedes)
+        }
+        listSedes()
+        
+        //LISTAR ROL
+        const listRoles = async () => {
+            const rol = await axios.get('http://localhost:8080/roles')
+            const infoRol = rol.data.map(item => ({
+                value: item.idrol,
+                label: item.nombre
+            }))
+            setRoles(infoRol)
+        }
+        listRoles()
         
     }, [])
 
@@ -166,17 +192,7 @@ export const CrearPersona = () => {
                                 Segundo Apellido
                             </InputX>
                         </div>
-                        {/* <InputX
-                            type="text"
-                            nombre="idcargo"
-                            register={register}
-                            required={{
-                                value: true,
-                                message: "Ingresa el cargo por favor",
-                            }}
-                        >
-                            Cargo
-                        </InputX> */}
+                        <div className="inputs-container">
                         <SelectX
                             className="select-container"
                             options={cargosData}
@@ -192,28 +208,10 @@ export const CrearPersona = () => {
                         {
                             errors.idcargo && <span>{errors.idcargo.message}</span>
                         }
-                        <div className="inputs-container">
-                            {/* <div className="input1-container">
-                                <SelectX
-                                    className="select-container"
-                                    options={area}
-                                    name="area"
-                                    register={register}
-                                    setValue={setValue}
-                                    required={{
-                                        value: true,
-                                        message: "Selecciona el area por favor",
-                                    }} >
-                                    Area
-                                </SelectX>
-                                {
-                                    errors.area && <span>{errors.area.message}</span>
-                                }
-                            </div> */}
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
-                                    options={rol}
+                                    options={roles}
                                     name="rol"
                                     register={register}
                                     setValue={setValue}
@@ -227,10 +225,13 @@ export const CrearPersona = () => {
                                     errors.rol && <span>{errors.rol.message}</span>
                                 }
                             </div>
+                        </div>
+                        
+                        <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
-                                    options={sede}
+                                    options={sedes}
                                     name="idsede"
                                     register={register}
                                     setValue={setValue}
@@ -244,8 +245,6 @@ export const CrearPersona = () => {
                                     errors.idsede && <span>{errors.idsede.message}</span>
                                 }
                             </div>
-                        </div>
-                        <div className="inputs-container">
                             <div className="input1-container">
                                 <InputX
                                     type="text"
@@ -292,11 +291,16 @@ export const CrearPersona = () => {
                             register={register}
                             setValue={setValue}>
                         </InputX>
+                        <InputX
+                            type="hidden"
+                            nombre="estado"
+                            register={register}
+                            setValue={setValue}>
+                        </InputX>
                         <BotonX
                             type="submit">Agregar Usuario
                         </BotonX>
-                        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
-
+                        <pre>{JSON.stringify(watch(), null, 2)}</pre>
                     </Form>
                 </Contenido>
 
