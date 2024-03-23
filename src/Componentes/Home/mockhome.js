@@ -27,4 +27,5 @@ export const columns = [
         header: "Tecnico",
         accessorKey: 'nodoctecnico'
     },
+    
 ]

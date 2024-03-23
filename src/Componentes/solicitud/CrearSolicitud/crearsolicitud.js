@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ModalX } from "../../shared/ModalX/ModalX";
 import { InputX } from "../../shared/Input/InputX";
 import { BotonX } from "../../shared/BotonX/BotonX";
 import { Form } from "../../shared/Form/Form";
 import { useForm } from "react-hook-form"
 import styled from "styled-components";
-import {Categorias} from "../CrearSolicitud/Mock_crearsolicitud"
 import {SelectX} from "../../shared/SelectX/SelectX"
+import axios from "axios";
 
 export const CrearSolicitud = () => {
 
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
+    const [categorias, setCategorias] = useState({})
 
     const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
         mode: "onChange",
@@ -24,6 +25,19 @@ export const CrearSolicitud = () => {
 
         reset();
     });
+
+    useEffect(() => {
+        const listCategorias = async () => {
+            const categoria = await axios.get('http://localhost:8080/categorias')
+            const infoCategorias = categoria.data.map(item => ({
+                value: item.idcat,
+                label: item.nombre
+            }))
+            setCategorias(infoCategorias)
+        }
+        listCategorias()
+    } ,[])
+  
 
     return (
         <>
@@ -56,7 +70,7 @@ export const CrearSolicitud = () => {
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
-                                    options={Categorias}
+                                    options={categorias}
                                     name="tipoRol"
                                     register={register}
                                     setValue={setValue}
