@@ -1,24 +1,18 @@
 import styled from 'styled-components';
 import { v } from '../../styles/variables';
 import logo from '../../../Imagenes/soporte-de-ti.png';
-import { IoIosArrowBack } from "react-icons/io";
 import { Light } from '../../styles/themes';
 import { linksArray } from './datalink';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     const modSidebarOpen = () => {
         setSidebarOpen(!sidebarOpen)
     }
-    const { pathname } = useLocation();
-    const isActive = Location.pathname;
     return (
         <Container isOpen={sidebarOpen}>
-            <button className='sidebarButton' onClick={modSidebarOpen}>
-                <IoIosArrowBack />
-            </button>
             <div className='Logocontent'>
-                <div className='imgcontent'>
+                <div className='imgcontent' onClick={modSidebarOpen}>
                     <img src={logo}></img>
                 </div>
                 <h3>SGRT</h3>
@@ -81,6 +75,7 @@ const Container = styled.div`
 
         .imgcontent {
             display: flex;
+            cursor: pointer;
 
             img {
                 max-width: 40px;

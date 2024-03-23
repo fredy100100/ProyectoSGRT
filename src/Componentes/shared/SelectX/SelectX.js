@@ -5,7 +5,7 @@ import Select from "react-select";
 export const SelectX = ({className, children, register, setValue, name, options, required = { value: undefined, message:""} }) => {
 
   const handleSelectChange = (selectedOption) => {
-    setValue(name, selectedOption);
+    setValue(name, selectedOption.value);
   }
   return (
     <div className="SelectX-container">

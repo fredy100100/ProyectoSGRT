@@ -7,11 +7,12 @@ import {
     getFilteredRowModel
 } from '@tanstack/react-table';
 import './simpleTable.css';
-import React, { Children, useState } from 'react';
+import React, { useState } from 'react';
+import { BotonesNav } from '../tablenavegation/botonesNav'
 
 export const Context = React.createContext();
 
-export const SimpleTable = ({navegacion, filtro, columns, data, titulo }) => {
+export const SimpleTable = ({filtro, columns, data, titulo}) => {
 
     const [sorting, setSorting] = useState([])
     const [filtering, setFiltering] = useState("")
@@ -81,7 +82,9 @@ export const SimpleTable = ({navegacion, filtro, columns, data, titulo }) => {
                             </tbody>
                         </table>
                     </div>
-                    {navegacion}
+                    {
+                       (data.length > 10 ) ? <BotonesNav /> : null
+                    }
                 </div>
 
             </div>

@@ -1,30 +1,87 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ModalX } from "../../shared/ModalX/ModalX";
 import { SelectX } from "../../shared/SelectX/SelectX";
 import { InputX } from "../../shared/Input/InputX";
-import { tipoIdentificacion, rol, area, sede} from "../mock";
 import { BotonX } from "../../shared/BotonX/BotonX";
 import { Form } from "../../shared/Form/Form";
 import { useForm } from "react-hook-form"
 import styled from "styled-components";
 import './crearpersona.css'
+import axios from 'axios';
 
 export const CrearPersona = () => {
 
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
+    const [cargosData, setCargosData] = useState({})
+    const [tiposDocData, setTiposDocData] = useState({})
+    const [sedes, setSedes] = useState({})
+    const [roles, setRoles] = useState({})
 
-    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
+    const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm({
         mode: "onChange",
         defaultValues: {
-            password: "Colombia2023."
+            pass: "Colombia2023.",
+            estado: true
         },
     });
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
+       const createUser = async (user) => {
+        console.log(user)
+        const infoUser = await axios.post('http://localhost:8080/create', user)       
+       }
 
-        reset();
+        createUser(data)
+        // reset();
     });
+
+    useEffect(() => {
+
+        // LISTAR CARGOS
+        const listCargos = async () => {
+            const cargos = await axios.get('http://localhost:8080/cargos')
+            const infoCargos = cargos.data.map(item => ({
+                value: item.idcargo,
+                label: item.nombre
+            }))
+            setCargosData(infoCargos)
+        }
+        listCargos()
+
+        // LISTAR TIPOSDOC
+        const listTiposDoc = async () => {
+            const tiposDoc = await axios.get('http://localhost:8080/tiposdoc')
+            const infotiposDoc = tiposDoc.data.map(item => ({
+                value: item.iddoc,
+                label: item.tipo
+            }))
+            setTiposDocData(infotiposDoc)
+        }
+        listTiposDoc()
+
+        //LISTAR SEDES
+        const listSedes = async () => {
+            const sede = await axios.get('http://localhost:8080/sedes')
+            const infoSedes = sede.data.map(item => ({
+                value: item.idsede,
+                label: item.nombre
+            }))
+            setSedes(infoSedes)
+        }
+        listSedes()
+        
+        //LISTAR ROL
+        const listRoles = async () => {
+            const rol = await axios.get('http://localhost:8080/roles')
+            const infoRol = rol.data.map(item => ({
+                value: item.idrol,
+                label: item.nombre
+            }))
+            setRoles(infoRol)
+        }
+        listRoles()
+        
+    }, [])
 
     return (
         <>
@@ -39,8 +96,8 @@ export const CrearPersona = () => {
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
-                                    options={tipoIdentificacion}
-                                    name="tipoIdentificacion"
+                                    options={tiposDocData}
+                                    name="iddoc"
                                     register={register}
                                     setValue={setValue}
                                     required={{
@@ -51,13 +108,13 @@ export const CrearPersona = () => {
                                     Tipo de Doc.
                                 </SelectX>
                                 {
-                                    errors.tipoIdentificacion && <span>{errors.tipoIdentificacion.message}</span>
+                                    errors.iddoc && <span>{errors.iddoc.message}</span>
                                 }
                             </div>
                             <div className="input1-container">
                                 <InputX
                                     type="text"
-                                    nombre="numeroIdenticacion"
+                                    nombre="nodoc"
                                     register={register}
                                     required={{
                                         value: true,
@@ -79,7 +136,7 @@ export const CrearPersona = () => {
                                     Numero de Identificación
                                 </InputX>
                                 {
-                                    errors.numeroIdenticacion && <span>{errors.numeroIdenticacion.message}</span>
+                                    errors.nodoc && <span>{errors.nodoc.message}</span>
                                 }
                             </div>
                         </div>
@@ -87,7 +144,7 @@ export const CrearPersona = () => {
                             <div className="input1-container">
                                 <InputX
                                     type="text"
-                                    nombre="primerNombre"
+                                    nombre="pnom"
                                     register={register}
                                     required={{
                                         value: true,
@@ -97,13 +154,13 @@ export const CrearPersona = () => {
                                     Primer Nombre
                                 </InputX>
                                 {
-                                    errors.primerNombre && <span>{errors.primerNombre.message}</span>
+                                    errors.pnom && <span>{errors.pnom.message}</span>
                                 }
                             </div>
 
                             <InputX
                                 type="text"
-                                nombre="segundoNombre"
+                                nombre="snom"
                                 register={register}
                             >
                                 Segundo Nombre
@@ -113,7 +170,7 @@ export const CrearPersona = () => {
                             <div className="input1-container">
                                 <InputX
                                     type="text"
-                                    nombre="primerApellido"
+                                    nombre="pape"
                                     register={register}
                                     required={{
                                         value: true,
@@ -123,55 +180,59 @@ export const CrearPersona = () => {
                                     Primer Apellido
                                 </InputX>
                                 {
-                                    errors.primerApellido && <span>{errors.primerApellido.message}</span>
+                                    errors.pape && <span>{errors.pape.message}</span>
                                 }
                             </div>
 
                             <InputX
                                 type="text"
-                                nombre="segundoApellido"
+                                nombre="sape"
                                 register={register}
                             >
                                 Segundo Apellido
                             </InputX>
                         </div>
-                        <InputX
-                            type="text"
-                            nombre="cargoPersona"
+                        <div className="inputs-container">
+                        <SelectX
+                            className="select-container"
+                            options={cargosData}
+                            name="idcargo"
                             register={register}
+                            setValue={setValue}
                             required={{
                                 value: true,
-                                message: "Ingresa el cargo por favor",
-                            }}
-                        >
+                                message: "Selecciona el cargo por favor",
+                            }} >
                             Cargo
-                        </InputX>
+                        </SelectX>
                         {
-                            errors.cargoPersona && <span>{errors.cargoPersona.message}</span>
+                            errors.idcargo && <span>{errors.idcargo.message}</span>
                         }
-                        <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
-                                    options={area}
-                                    name="area"
+                                    options={roles}
+                                    name="idrol"
                                     register={register}
                                     setValue={setValue}
                                     required={{
                                         value: true,
-                                        message: "Selecciona el area por favor",
+                                        message: "Selecciona el Rol por favor",
                                     }} >
-                                    Area
+                                    Rol
                                 </SelectX>
                                 {
-                                    errors.area && <span>{errors.area.message}</span>
+                                    errors.rol && <span>{errors.rol.message}</span>
                                 }
                             </div>
+                        </div>
+                        
+                        <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
-                                    options={sede}
-                                    name="sede"
+                                    options={sedes}
+                                    name="idsede"
                                     register={register}
                                     setValue={setValue}
                                     required={{
@@ -181,15 +242,13 @@ export const CrearPersona = () => {
                                     Sede
                                 </SelectX>
                                 {
-                                    errors.sede && <span>{errors.sede.message}</span>
+                                    errors.idsede && <span>{errors.idsede.message}</span>
                                 }
                             </div>
-                        </div>
-                        <div className="inputs-container">
                             <div className="input1-container">
                                 <InputX
                                     type="text"
-                                    nombre="numeroCelular"
+                                    nombre="celular"
                                     register={register}
                                     setValue={setValue}
                                     pattern={{
@@ -208,24 +267,7 @@ export const CrearPersona = () => {
                                     Celular
                                 </InputX>
                                 {
-                                    errors.numeroCelular && <span>{errors.numeroCelular.message}</span>
-                                }
-                            </div>
-                            <div className="input1-container">
-                                <SelectX
-                                    className="select-container"
-                                    options={rol}
-                                    name="tipoRol"
-                                    register={register}
-                                    setValue={setValue}
-                                    required={{
-                                        value: true,
-                                        message: "Selecciona el Rol por favor",
-                                    }} >
-                                    Rol
-                                </SelectX>
-                                {
-                                    errors.tipoRol && <span>{errors.tipoRol.message}</span>
+                                    errors.celular && <span>{errors.celular.message}</span>
                                 }
                             </div>
                         </div>
@@ -245,12 +287,20 @@ export const CrearPersona = () => {
                         }
                         <InputX
                             type="hidden"
-                            nombre="password"
+                            nombre="pass"
+                            register={register}
+                            setValue={setValue}>
+                        </InputX>
+                        <InputX
+                            type="hidden"
+                            nombre="estado"
                             register={register}
                             setValue={setValue}>
                         </InputX>
                         <BotonX
-                            type="submit">Agregar Usuario</BotonX>
+                            type="submit">Agregar Usuario
+                        </BotonX>
+                        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
                     </Form>
                 </Contenido>
 
