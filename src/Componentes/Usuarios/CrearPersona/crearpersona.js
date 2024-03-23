@@ -27,9 +27,10 @@ export const CrearPersona = () => {
 
     const onSubmit = handleSubmit((data) => {
        const createUser = async (user) => {
-        // const infoUser = await axios.post('http://localhost:8080/create', user)
         console.log(user)
+        const infoUser = await axios.post('http://localhost:8080/create', user)       
        }
+
         createUser(data)
         // reset();
     });
@@ -211,7 +212,7 @@ export const CrearPersona = () => {
                                 <SelectX
                                     className="select-container"
                                     options={roles}
-                                    name="rol"
+                                    name="idrol"
                                     register={register}
                                     setValue={setValue}
                                     required={{
@@ -299,7 +300,7 @@ export const CrearPersona = () => {
                         <BotonX
                             type="submit">Agregar Usuario
                         </BotonX>
-                        <pre>{JSON.stringify(watch(), null, 2)}</pre>
+                        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
                     </Form>
                 </Contenido>
 
