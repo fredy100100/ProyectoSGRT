@@ -12,7 +12,7 @@ import { BotonesNav } from '../tablenavegation/botonesNav'
 
 export const Context = React.createContext();
 
-export const SimpleTable = ({filtro, columns, data, titulo}) => {
+export const SimpleTable = ({filtro, columns, data, titulo, buttonAction={value: false}}) => {
 
     const [sorting, setSorting] = useState([])
     const [filtering, setFiltering] = useState("")
@@ -33,6 +33,10 @@ export const SimpleTable = ({filtro, columns, data, titulo}) => {
         onSortingChange: setSorting,
         onGlobalFilterChange: setFiltering
     });
+
+    const handleButtonAction = (rowData) => {
+        console.log(rowData)
+    }
 
     return (
         <Context.Provider value={{ filtering, setFiltering, table }}>
@@ -63,6 +67,9 @@ export const SimpleTable = ({filtro, columns, data, titulo}) => {
                                                     </th>
                                                 ))
                                             }
+                                            {
+                                                (buttonAction.value ? <th></th> : null)
+                                            }
                                         </tr>
                                     ))
                                 }
@@ -76,6 +83,16 @@ export const SimpleTable = ({filtro, columns, data, titulo}) => {
                                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                                 </td>
                                             ))}
+                                            {
+                                                (buttonAction.value ? 
+                                                <td>
+                                                    <button className='actionContainer' 
+                                                        onClick={() => handleButtonAction(row.original)}>
+                                                            {buttonAction.action}
+                                                    </button>
+                                                </td> 
+                                                : null)
+                                            }
                                         </tr>
                                     ))
                                 }

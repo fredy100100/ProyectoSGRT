@@ -17,7 +17,7 @@ export const CrearPersona = () => {
     const [sedes, setSedes] = useState({})
     const [roles, setRoles] = useState({})
 
-    const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm({
+    const { register, handleSubmit, formState: { errors }, setValue} = useForm({
         mode: "onChange",
         defaultValues: {
             pass: "Colombia2023.",
@@ -26,13 +26,13 @@ export const CrearPersona = () => {
     });
 
     const onSubmit = handleSubmit((data) => {
-        
         const createUser = async (user) => {
             try {
-                const infoUser = await axios.post('http://localhost:8080/create', user);
-                console.log(infoUser.data.mensaje)               
+                const infoUser = await axios.post('http://localhost:8080/create', user)
+                alert(infoUser.data.mensaje)
+                cambiarEstadoModal1(!estadoModal1)               
             } catch (error) {
-                console.log(error.response.data.mensaje);
+                alert(error.response.data.mensaje);
             }
         }
         createUser(data)        
@@ -306,7 +306,6 @@ export const CrearPersona = () => {
                         <BotonX
                             type="submit">Agregar Usuario
                         </BotonX>
-                        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
                     </Form>
                 </Contenido>
 
