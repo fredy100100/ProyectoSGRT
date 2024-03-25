@@ -5,11 +5,11 @@ import { CrearPersona } from "./CrearPersona/crearpersona";
 import { SimpleTable } from "../shared/simpleTable/simpleTable";
 import { InputTable } from "../shared/inputTable/inputTable";
 import axios from 'axios';
-import { React, useState, useEffect} from 'react'
+import { React, useState, useEffect } from 'react'
 
 export const Usuarios = () => {
 
-  const [isData, setIsData] = useState({})
+  const [isData, setIsData] = useState([])
 
   useEffect(() => {
 
@@ -19,8 +19,15 @@ export const Usuarios = () => {
       return setIsData(info)
     }
     datos()
-
   }, [])
+
+  // CAMBIO LA INFORMACIÓN QUE SE VA A MOSTRAR EN LA COLUMNA ESTADO
+  const data = isData.map(item => ({
+    ...item,
+    estado: item.estado ? 'Activo' : 'Inactivo'
+ }))
+
+
 
   return (
     <div className="users-container">
@@ -33,7 +40,12 @@ export const Usuarios = () => {
 
         </div>
         <div className="table-content">
-          <SimpleTable filtro={<InputTable />} columns={columns} data={isData} titulo="Usuarios">
+          <SimpleTable 
+            filtro={<InputTable />} 
+            columns={columns} 
+            data={data} 
+            titulo="Usuarios" 
+            buttonAction={{ value: true, action: "Modificar" }}>
           </SimpleTable>
         </div>
       </div>

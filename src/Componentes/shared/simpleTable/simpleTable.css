@@ -64,3 +64,17 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #fff6;
 }
+
+.actionContainer { 
+    top: 50%;
+    left: 50%;
+    background: #6c757d;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    width: 80px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 100px;
+}

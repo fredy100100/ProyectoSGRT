@@ -17,7 +17,7 @@ export const CrearPersona = () => {
     const [sedes, setSedes] = useState({})
     const [roles, setRoles] = useState({})
 
-    const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm({
+    const { register, handleSubmit, formState: { errors }, setValue} = useForm({
         mode: "onChange",
         defaultValues: {
             pass: "Colombia2023.",
@@ -26,13 +26,16 @@ export const CrearPersona = () => {
     });
 
     const onSubmit = handleSubmit((data) => {
-       const createUser = async (user) => {
-        console.log(user)
-        const infoUser = await axios.post('http://localhost:8080/create', user)       
-       }
-
-        createUser(data)
-        // reset();
+        const createUser = async (user) => {
+            try {
+                const infoUser = await axios.post('http://localhost:8080/create', user)
+                alert(infoUser.data.mensaje)
+                cambiarEstadoModal1(!estadoModal1)               
+            } catch (error) {
+                alert(error.response.data.mensaje);
+            }
+        }
+        createUser(data)        
     });
 
     useEffect(() => {
@@ -69,7 +72,7 @@ export const CrearPersona = () => {
             setSedes(infoSedes)
         }
         listSedes()
-        
+
         //LISTAR ROL
         const listRoles = async () => {
             const rol = await axios.get('http://localhost:8080/roles')
@@ -80,7 +83,7 @@ export const CrearPersona = () => {
             setRoles(infoRol)
         }
         listRoles()
-        
+
     }, [])
 
     return (
@@ -193,21 +196,24 @@ export const CrearPersona = () => {
                             </InputX>
                         </div>
                         <div className="inputs-container">
-                        <SelectX
-                            className="select-container"
-                            options={cargosData}
-                            name="idcargo"
-                            register={register}
-                            setValue={setValue}
-                            required={{
-                                value: true,
-                                message: "Selecciona el cargo por favor",
-                            }} >
-                            Cargo
-                        </SelectX>
-                        {
-                            errors.idcargo && <span>{errors.idcargo.message}</span>
-                        }
+                            <div className="input1-container">
+                                <SelectX
+                                    className="select-container"
+                                    options={cargosData}
+                                    name="idcargo"
+                                    register={register}
+                                    setValue={setValue}
+                                    required={{
+                                        value: true,
+                                        message: "Selecciona el cargo por favor",
+                                    }} >
+                                    Cargo
+                                </SelectX>
+                                {
+                                    errors.idcargo && <span>{errors.idcargo.message}</span>
+                                }
+                            </div>
+
                             <div className="input1-container">
                                 <SelectX
                                     className="select-container"
@@ -222,11 +228,11 @@ export const CrearPersona = () => {
                                     Rol
                                 </SelectX>
                                 {
-                                    errors.rol && <span>{errors.rol.message}</span>
+                                    errors.idrol && <span>{errors.idrol.message}</span>
                                 }
                             </div>
                         </div>
-                        
+
                         <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
@@ -300,7 +306,6 @@ export const CrearPersona = () => {
                         <BotonX
                             type="submit">Agregar Usuario
                         </BotonX>
-                        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
                     </Form>
                 </Contenido>
 
