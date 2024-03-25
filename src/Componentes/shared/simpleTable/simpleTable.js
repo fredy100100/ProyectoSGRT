@@ -9,13 +9,15 @@ import {
 import './simpleTable.css';
 import React, { useState } from 'react';
 import { BotonesNav } from '../tablenavegation/botonesNav'
+import { ModalX } from '../ModalX/ModalX';
 
 export const Context = React.createContext();
 
-export const SimpleTable = ({filtro, columns, data, titulo, buttonAction={value: false}}) => {
+export const SimpleTable = ({select, filtro, columns, data, titulo, buttonAction={value: false}}) => {
 
     const [sorting, setSorting] = useState([])
     const [filtering, setFiltering] = useState("")
+    const [actionModal, setActionModal] = useState(false)
 
     const paginationRowModel = getPaginationRowModel()
 
@@ -35,7 +37,8 @@ export const SimpleTable = ({filtro, columns, data, titulo, buttonAction={value:
     });
 
     const handleButtonAction = (rowData) => {
-        console.log(rowData)
+        select(rowData)
+        setActionModal((prev) => !prev)
     }
 
     return (
@@ -103,7 +106,9 @@ export const SimpleTable = ({filtro, columns, data, titulo, buttonAction={value:
                        (data.length > 10 ) ? <BotonesNav /> : null
                     }
                 </div>
-
+                    <ModalX estado={actionModal} cambiarEstado={setActionModal}>
+                        
+                    </ModalX>
             </div>
         </Context.Provider>
     )

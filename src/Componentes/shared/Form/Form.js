@@ -1,5 +1,3 @@
-import './Form.css';
-
 export const Form = (props) => {
 
     const { children } = props;

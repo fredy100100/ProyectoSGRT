@@ -36,8 +36,7 @@ export const columns = [
         <div style={{ backgroundColor: props.getValue() === 'Activo' ? '#1d8453' : '#db3444',
                       color: 'white',
                       borderRadius:'10px', 
-                      textAlign:'center',
-                      cursor: 'pointer'}}
+                      textAlign:'center'}}
                       >
           {props.getValue()}
         </div>

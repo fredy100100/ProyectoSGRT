@@ -6,10 +6,13 @@ import { SimpleTable } from "../shared/simpleTable/simpleTable";
 import { InputTable } from "../shared/inputTable/inputTable";
 import axios from 'axios';
 import { React, useState, useEffect } from 'react'
+import ModificarPersona from "./ModificarPersona/ModificarPersona";
 
 export const Usuarios = () => {
 
-  const [isData, setIsData] = useState([])
+  const [isData, setIsData] = useState([]);
+  const [userToModify, setUserToModify] = useState({});
+  const [isModal, setIsModal] = useState()
 
   useEffect(() => {
 
@@ -27,7 +30,11 @@ export const Usuarios = () => {
     estado: item.estado ? 'Activo' : 'Inactivo'
  }))
 
-
+ // RECUPERO LA INFORMACIÓN DE LA TABLA
+ const infoRetryTable = (user, modalModify) => {
+  setUserToModify(user)
+  setIsModal(modalModify)
+ }
 
   return (
     <div className="users-container">
@@ -35,6 +42,7 @@ export const Usuarios = () => {
         <div className="head-users-container">
           <div className="header-users-container">
             <CrearPersona />
+            <ModificarPersona user={userToModify}/>
             <Section></Section>
           </div>
 
@@ -45,7 +53,8 @@ export const Usuarios = () => {
             columns={columns} 
             data={data} 
             titulo="Usuarios" 
-            buttonAction={{ value: true, action: "Modificar" }}>
+            buttonAction={{ value: true, action: "Modificar" }}
+            select={infoRetryTable}>
           </SimpleTable>
         </div>
       </div>
