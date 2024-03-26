@@ -98,7 +98,6 @@ export const CrearPersona = () => {
                         <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
-                                    className="select-container"
                                     options={tiposDocData}
                                     name="iddoc"
                                     register={register}
@@ -198,7 +197,6 @@ export const CrearPersona = () => {
                         <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
-                                    className="select-container"
                                     options={cargosData}
                                     name="idcargo"
                                     register={register}
@@ -216,7 +214,6 @@ export const CrearPersona = () => {
 
                             <div className="input1-container">
                                 <SelectX
-                                    className="select-container"
                                     options={roles}
                                     name="idrol"
                                     register={register}
@@ -236,7 +233,6 @@ export const CrearPersona = () => {
                         <div className="inputs-container">
                             <div className="input1-container">
                                 <SelectX
-                                    className="select-container"
                                     options={sedes}
                                     name="idsede"
                                     register={register}

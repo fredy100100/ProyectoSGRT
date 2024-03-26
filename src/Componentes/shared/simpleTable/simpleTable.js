@@ -10,15 +10,18 @@ import './simpleTable.css';
 import React, { useState } from 'react';
 import { BotonesNav } from '../tablenavegation/botonesNav'
 import { ModalX } from '../ModalX/ModalX';
+import ModificarPersona from '../../Usuarios/ModificarPersona/ModificarPersona';
 
 export const Context = React.createContext();
 
-export const SimpleTable = ({select, filtro, columns, data, titulo, buttonAction={value: false}}) => {
+export const SimpleTable = ({filtro, columns, data, titulo, buttonAction={value: false}}) => {
 
     const [sorting, setSorting] = useState([])
     const [filtering, setFiltering] = useState("")
     const [actionModal, setActionModal] = useState(false)
+    const [infoModal, setInfoModal] = useState([])
 
+    console.log(infoModal)
     const paginationRowModel = getPaginationRowModel()
 
     const table = useReactTable({
@@ -37,7 +40,7 @@ export const SimpleTable = ({select, filtro, columns, data, titulo, buttonAction
     });
 
     const handleButtonAction = (rowData) => {
-        select(rowData)
+        setInfoModal(rowData)
         setActionModal((prev) => !prev)
     }
 
@@ -106,8 +109,12 @@ export const SimpleTable = ({select, filtro, columns, data, titulo, buttonAction
                        (data.length > 10 ) ? <BotonesNav /> : null
                     }
                 </div>
-                    <ModalX estado={actionModal} cambiarEstado={setActionModal}>
-                        
+                    <ModalX estado={actionModal} cambiarEstado={setActionModal} titulo={buttonAction.titleModal}>
+                        {
+                           (titulo === 'Usuarios') && (
+                            <ModificarPersona user={infoModal}/>
+                           )
+                        }
                     </ModalX>
             </div>
         </Context.Provider>
