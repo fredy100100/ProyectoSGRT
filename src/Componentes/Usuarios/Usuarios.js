@@ -9,7 +9,7 @@ import { React, useState, useEffect } from 'react'
 
 export const Usuarios = () => {
 
-  const [isData, setIsData] = useState([])
+  const [isData, setIsData] = useState([]);
 
   useEffect(() => {
 
@@ -27,8 +27,6 @@ export const Usuarios = () => {
     estado: item.estado ? 'Activo' : 'Inactivo'
  }))
 
-
-
   return (
     <div className="users-container">
       <div className="layout-users-container">
@@ -45,7 +43,7 @@ export const Usuarios = () => {
             columns={columns} 
             data={data} 
             titulo="Usuarios" 
-            buttonAction={{ value: true, action: "Modificar" }}>
+            buttonAction={{ value: true, action: "Modificar", titleModal: "Modificar Usuario" }}>
           </SimpleTable>
         </div>
       </div>

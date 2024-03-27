@@ -12,15 +12,19 @@ export const InputX = ({
   required = { value: undefined, message: "" },
   pattern = { value: undefined, message: "" },
   minLength = { value: undefined, message: "" },
-  maxLength = { value: undefined, message: "" }
+  maxLength = { value: undefined, message: "" },
+  disabled,
+  style
 }) => {
   return (
     <div className="Input-container">
       <input
+        disabled={disabled}
         onChange={onChange}
         value={value}
         placeholder={placeholder}
         type={type}
+        style={style}
         {...register(nombre, {
           required: {
             value: required.value,

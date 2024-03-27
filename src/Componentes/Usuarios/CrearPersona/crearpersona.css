@@ -1,7 +1,6 @@
 .inputs-container {
     display: flex;
-    flex-direction: row;
-    gap: 10px
+    gap: 10px;
 }
 
 .select-container {

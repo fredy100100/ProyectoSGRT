@@ -1,0 +1,10 @@
+.bottonModificarUser{
+  margin-top: 10px
+}
+
+.checkboxEstado{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding-left: 20px;
+}
