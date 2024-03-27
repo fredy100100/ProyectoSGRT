@@ -273,6 +273,7 @@ export const CrearPersona = () => {
                                 }
                             </div>
                         </div>
+                        <div className="input1-container"> 
                         <InputX
                             type="email"
                             nombre="correo"
@@ -287,21 +288,12 @@ export const CrearPersona = () => {
                         {
                             errors.correo && <span>{errors.correo.message}</span>
                         }
-                        <InputX
-                            type="hidden"
-                            nombre="pass"
-                            register={register}
-                            setValue={setValue}>
-                        </InputX>
-                        <InputX
-                            type="hidden"
-                            nombre="estado"
-                            register={register}
-                            setValue={setValue}>
-                        </InputX>
+                        </div>
+                        <div className="bottonModificarUser">
                         <BotonX
                             type="submit">Agregar Usuario
-                        </BotonX>
+                        </BotonX>   
+                        </div>            
                     </Form>
                 </Contenido>
 
