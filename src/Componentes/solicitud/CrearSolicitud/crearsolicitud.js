@@ -13,17 +13,22 @@ export const CrearSolicitud = () => {
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
     const [categorias, setCategorias] = useState({})
 
-    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
+    const { register, handleSubmit, watch, formState: { errors }, reset, setValue } = useForm({
         mode: "onChange",
         defaultValues: {
-            password: "Colombia2023."
+            idest: 1
         },
     });
 
-    const onSubmit = handleSubmit((data) => {
-        console.log(data);
 
-        reset();
+    const onSubmit = handleSubmit((data) => {
+        const createSolicitud = async (solicitud) => {
+                const infoUser = await axios.post('http://localhost:8080/create_solicitud', solicitud)
+                alert(infoUser.data)
+                cambiarEstadoModal1(!estadoModal1)               
+        }
+        createSolicitud(data);
+        reset()
     });
 
     useEffect(() => {
@@ -53,7 +58,7 @@ export const CrearSolicitud = () => {
                             <div className="input1-container">
                                 <InputX
                                     type="text"
-                                    nombre="Observacion"
+                                    nombre="obser"
                                     register={register}
                                     required={{
                                         value: true,
@@ -63,7 +68,7 @@ export const CrearSolicitud = () => {
                                     Observacion
                                 </InputX>
                                 {
-                                    errors.Observacion && <span>{errors.Observacion.message}</span>
+                                    errors.obser && <span>{errors.obser.message}</span>
                                 }
                             </div>
     
@@ -71,7 +76,7 @@ export const CrearSolicitud = () => {
                                 <SelectX
                                     className="select-container"
                                     options={categorias}
-                                    name="tipoRol"
+                                    name="idcat"
                                     register={register}
                                     setValue={setValue}
                                     required={{
@@ -81,19 +86,14 @@ export const CrearSolicitud = () => {
                                     Categoria
                                 </SelectX>
                                 {
-                                    errors.tipoRol && <span>{errors.tipoRol.message}</span>
+                                    errors.idcat && <span>{errors.idcat.message}</span>
                                 }
                             </div>
                         </div>
                         
-                        <InputX
-                            type="hidden"
-                            nombre="password"
-                            register={register}
-                            setValue={setValue}>
-                        </InputX>
                         <BotonX
                             type="submit">Generar Solicitud</BotonX>
+                            <pre>{JSON.stringify(watch(), null, 2)}</pre>
                     </Form>
                 </Contenido>
 
