@@ -22,7 +22,8 @@ export const Solicitudes = () => {
                 </div>
             </div>
             <div className='tabla-historial'>
-                <SimpleTable columns={columns} data={data} titulo="Tus solicitudes" />
+                <SimpleTable columns={columns} data={data} titulo="Tus solicitudes" 
+                buttonAction={{ value: true, action: "Detalles", titleModal: "Detalles de solicitud" }}/>
             </div>
 
         </div>
