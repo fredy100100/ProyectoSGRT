@@ -15,26 +15,22 @@ export const tipoactivo = [
 export const headTableActivos = [
     {
         header: "Tipo",
-        accessorKey: 'Tipo'
+        accessorKey: 'idtipo'
     },
     {
         header: "Marca",
-        accessorKey: 'Marca'
+        accessorKey: 'idmarca'
     },
     {
         header: "Serial",
-        accessorKey: 'Serial'
+        accessorKey: 'idserial'
     },
     {
         header: "Modelo",
-        accessorKey: 'Modelo'
+        accessorKey: 'modelo'
     },
     {
         header: "Asignado",
-        accessorKey: 'Asignado'
-    },
-    {
-        header: "Area",
-        accessorKey: "Area"
+        accessorKey: 'idperson'
     }
 ]

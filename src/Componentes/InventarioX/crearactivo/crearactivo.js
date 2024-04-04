@@ -7,18 +7,42 @@ import { BotonX } from "../../shared/BotonX/BotonX";
 import { Form } from "../../shared/Form/Form";
 import { useForm } from "react-hook-form"
 import styled from "styled-components";
+import { useEffect } from "react";
+import axios from "axios";
 
 export const CrearActivo = () => {
 
+    const[lisTipoact, setlistTipoact]=useState([])
+    const[listMarcact, setlisMarcact]=useState([])
+    useEffect(() =>{
+        const Tipoact=async() =>{
+            const inofTipoact=await axios.get("http://localhost:8080/tiposacts")
+            const info=inofTipoact.data.map(item => ({value: item.idtipo,label: item.nombre}));
+            setlistTipoact(info)
+        }
+    Tipoact()
+        const Marcaact=async() => {
+            const infoMarcact= await axios.get("http://localhost:8080/marcasact")
+            const info = infoMarcact.data.map(item => ({value: item.idmarca, label: item.nombre})); 
+            setlisMarcact(info)
+}
+Marcaact()
+}, []);
+
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
-    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
+    const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm({
         mode: "onChange",
         defaultValues: {},
     });
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
+        const createUser = async (activo) => {
+            const infoUser = await axios.post('http://localhost:8080/add_act', activo)
+            alert("Activo Creado")
+            cambiarEstadoModal1(!estadoModal1)               
+    }
+    createUser(data)
 
         reset();
     });
@@ -34,8 +58,8 @@ export const CrearActivo = () => {
             <Contenido>
                 <Form onSubmit={onSubmit} autocomplete="off">
                     <SelectX
-                        options={tipoactivo}
-                        name="tipoactivo"
+                        options={lisTipoact}
+                        name="idtipo"
                         register={register}
                         setValue={setValue}
                         required={{
@@ -50,7 +74,7 @@ export const CrearActivo = () => {
                     }
                     <InputX
                         type={"text"}
-                        nombre="serialactivo"
+                        nombre="idserial"
                         register={register}
                         required={{
                             value: true,
@@ -63,8 +87,8 @@ export const CrearActivo = () => {
                         errors.serialactivo && <span>{errors.serialactivo.message}</span>
                     }
                     <SelectX
-                        options={marcaactivo}
-                        name="marcaactivo"
+                        options={listMarcact}
+                        name="idmarca"
                         register={register}
                         setValue={setValue}
                         required={{
@@ -79,7 +103,7 @@ export const CrearActivo = () => {
                     }
                     <InputX
                         type={"text"}
-                        nombre="modeloactivo"
+                        nombre="modelo"
                         register={register}
                         required={{
                             value: true,
@@ -94,6 +118,7 @@ export const CrearActivo = () => {
                     <div className="boton-agregar">
                         <BotonX type="submit">Agregar Activo</BotonX>
                     </div>
+                    {/* <pre>{JSON.stringify(watch(), null,2)}</pre> */}
                 </Form>
             </Contenido>
         </ModalX>
