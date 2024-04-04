@@ -34,7 +34,7 @@ export const Inventario = () => {
 
         </div>
         <div className="table-content">
-          <SimpleTable filtro={<InputTable />} navegacion={<BotonesNav />} columns={headTableActivos} data={listActivos} titulo="Activos" >
+          <SimpleTable filtro={<InputTable />} columns={headTableActivos} data={listActivos} titulo="Activos" >
           </SimpleTable>
         </div>
       </div>
